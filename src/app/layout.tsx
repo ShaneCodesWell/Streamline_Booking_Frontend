@@ -19,25 +19,25 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body style={{ margin: 0, padding: 0 }}>
-      <header style={{ backgroundColor: 'ghostwhite'}}>
+      <header className="header">
           <nav style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '0.5rem 2rem' }}>
             <div style={{ flex: 1 }}>
               <a href="/"><Image src="/assets/images/Logo.svg" alt="brand-logo" width={60} height={60} /></a>
             </div>
             <ul style={{ listStyleType: 'none', display: 'flex', gap: '1rem', flex: 2, justifyContent: 'center' }}>
-              <li><Link href="#">Find Tutors</Link></li>
-              <li><Link href="#">Become a Tutor</Link></li>
-              <li><Link href="/contacts">Contact Us</Link></li>
-              <li><Link href="/about">About Us</Link></li>
+              <li><Link href="#" className="body-text">Find Tutors</Link></li>
+              <li><Link href="#" className="body-text">Become a Tutor</Link></li>
+              <li><Link href="/contacts" className="body-text">Contact Us</Link></li>
+              <li><Link href="/about" className="body-text">About Us</Link></li>
             </ul>
             <div style={{ flex: 1, display: 'flex', justifyContent: 'flex-end', gap: '1rem' }}>
-            <button className="bg-blue-500 text-white py-2 px-4 rounded">Log In</button>
-            <button className="bg-green-500 text-white py-2 px-4 rounded">Sign Up</button>
+            <button className="bg-blue-500 text-white py-1 px-4 rounded">Log In</button>
+            <button className="bg-blue-500 text-white py-1 px-4 rounded">Sign Up</button>
             </div>
           </nav>
         </header>
         {children}
-        <footer style={{ backgroundColor: "ghostwhite", padding: "1rem"}}>
+        <footer className="body-text" style={{ backgroundColor: "ghostwhite", padding: "1rem"}}>
           <h3>&copy; 2024 Streamline Researchers. All rights reserved.</h3>
         </footer>
         </body>

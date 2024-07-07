@@ -1,112 +1,34 @@
-import Image from "next/image";
+import Link from "next/link";
+import "./globals.css";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main className="px-8">
+      <div className="hero-container">
+      <div className="flex justify-center items-center pt-8">
+        <svg width="230" height="81" viewBox="0 0 292 84" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M108.261 66.3888C108.261 66.3888 112.603 62.7289 118.606 60.9311C124.608 59.1333 129.844 59.1333 129.844 59.1333C129.844 59.1333 134.314 58.5075 141.85 59.968C149.385 61.4285 156.09 66.0688 160.879 69.4065C165.668 72.7443 174.353 77.2399 178.887 77.2399C182.659 77.2399 183.779 76.7063 184.049 76.5272C184.098 76.4894 184.123 76.4694 184.123 76.4694C184.123 76.4694 184.103 76.4911 184.049 76.5272C183.434 77.0016 179.058 80.2811 173.203 82.1838C166.881 84.2385 158.835 84.5665 150.215 83.0828C141.594 81.5991 125.758 70.4339 123.778 69.4065C121.798 68.3792 115.221 65.8109 112.475 65.8751C109.729 65.9393 108.261 66.3888 108.261 66.3888Z" fill="white"/>
+          <path d="M114.008 70.9474C119.563 70.0484 126.46 73.002 126.46 73.002C126.46 73.002 117.009 67.6086 111.964 67.3517C106.92 67.0949 104.685 69.1496 101.683 72.1031C98.682 75.0567 96 82.1195 96 82.1195C96 82.1195 97.9486 78.8274 99.7037 77.1755C102.109 74.912 103.224 74.2361 106.281 73.002C108.757 72.0023 108.452 71.8463 114.008 70.9474Z" fill="white"/>
+          <path d="M175.629 75.185C171.862 74.4145 165.795 70.4336 165.795 70.4336C165.795 70.4336 173.462 74.0293 183.356 70.8831C193.25 67.7369 196 60.6099 196 60.6099C196 60.6099 194.467 65.1686 192.551 67.9938C190.636 70.8189 187.187 74.4787 184.889 75.185C182.59 75.8913 179.397 75.9555 175.629 75.185Z" fill="white"/>
+          <path d="M22.1291 1.024L21.3611 5.536C20.8331 5.344 20.0651 5.152 19.2971 5.152C18.1451 5.152 17.0411 5.632 16.4651 6.448C15.4571 7.792 15.1691 10.096 15.1691 13.888C15.1691 21.328 16.0331 27.136 16.0331 35.392C16.0331 39.568 15.2171 42.544 14.1131 44.32C12.5291 47.008 9.74506 48.112 6.96106 48.112C5.42506 48.112 3.45706 47.776 2.49706 47.296L3.40906 42.544C3.98506 42.784 4.89706 43.072 5.85706 43.072C6.86506 43.072 7.77706 42.736 8.40106 42.016C9.40906 40.864 9.93706 39.136 9.93706 35.248C9.93706 26.848 9.02506 20.896 9.02506 13.072C9.02506 7.792 10.0811 4.768 12.3851 2.56C13.9691 1.024 16.4651 0.399998 18.8171 0.399998C20.1131 0.399998 21.5051 0.735999 22.1291 1.024ZM23.5192 7.984H50.6392L50.4472 13.312C47.4712 13.12 44.5432 13.072 40.4632 13.072C39.9832 21.184 39.5032 29.536 39.4552 40H31.9672C32.6392 31.984 33.0712 22.24 33.3592 13.072C26.3512 13.072 25.5352 13.216 23.3272 13.264L23.5192 7.984ZM69.8722 25.36L77.7922 40H70.0642C67.7602 33.904 64.6882 28.144 61.8562 22.288C62.8162 22.432 63.7762 22.576 64.7362 22.576C68.3842 22.576 71.8402 20.944 71.8402 16.864C71.8402 13.12 68.4322 12.688 65.5522 12.688C63.8242 12.688 62.1442 12.784 60.4162 12.928C60.2722 17.104 59.6962 35.2 59.6482 40H52.4002C53.4562 29.392 53.7922 18.688 53.8402 7.984H68.2882C73.8562 7.984 78.7042 9.952 78.7042 15.952C78.7042 21.568 74.9602 24.352 69.8722 25.36ZM84.1226 7.984H107.499L107.259 13.264C104.523 13.12 101.787 13.072 99.0506 13.072H91.2266L90.8426 21.424H98.5226C100.347 21.424 102.267 21.28 104.907 21.232L104.619 26.128H90.5546L90.1706 34.912H99.5786C100.827 34.912 102.267 34.912 106.347 34.624L106.059 40H82.6346C83.5466 33.472 84.1226 14.464 84.1226 7.984ZM132.421 28.816H120.085C118.261 32.368 116.485 36.208 114.757 40H106.837C112.597 29.488 118.213 18.736 123.541 7.984H132.229C135.829 18.64 139.909 29.392 143.893 40H136.213C135.109 36.16 133.765 32.368 132.421 28.816ZM122.197 23.728H131.125L127.429 13.024L122.197 23.728ZM176.116 14.704L166.564 40H160.084L155.524 23.632C154.708 20.608 153.556 17.152 152.932 14.704H152.836C152.116 23.008 151.54 31.504 151.252 40H145.108C146.356 30.16 147.652 10.096 147.844 7.984H157.3C157.828 11.248 158.932 14.368 159.94 17.488C161.476 22.144 162.676 26.896 163.876 31.36H163.972C165.604 26.896 167.332 22.144 169.3 17.536C170.644 14.416 171.988 11.296 172.948 7.984H182.596C182.212 17.104 181.924 25.6 181.924 40H175.54C175.828 32.464 176.212 24.88 176.212 17.296V14.704H176.116ZM210.574 34.768L210.238 40H187.822C188.878 29.344 189.31 18.688 189.454 7.984H196.942C196.75 10.816 195.79 28.768 195.598 34.912H201.406C204.478 34.912 207.55 34.912 210.574 34.768ZM220.906 40H213.322C213.946 30.304 214.618 20.8 214.618 7.984H222.154C221.482 17.104 221.098 26.08 220.906 40ZM250.037 40L235.157 16.192H234.965C234.773 22.624 234.341 31.6 234.245 40H227.525C228.437 29.344 228.869 18.688 229.061 7.984H237.845C242.501 16.24 247.829 24.064 252.533 32.224H252.629C252.965 24.736 253.397 16 253.493 7.984H260.117C259.253 18.4 258.725 29.344 258.533 40H250.037ZM267.029 7.984H290.405L290.165 13.264C287.429 13.12 284.693 13.072 281.957 13.072H274.133L273.749 21.424H281.429C283.253 21.424 285.173 21.28 287.813 21.232L287.525 26.128H273.461L273.077 34.912H282.485C283.733 34.912 285.173 34.912 289.253 34.624L288.965 40H265.541C266.453 33.472 267.029 14.464 267.029 7.984Z" fill="white"/>
+        </svg>  
+      </div>
+        <div className="text-center text-white">
+          <h2 className="text-2xl font-semibold mb-4">
+            Welcome to Streamlined Researchers
+          </h2>
+          <p className="text-lg px-20">
+            Streamlined Researchers Service offers a comprehensive, cost-effective solution for  <br></br>researchers and scholars,allowing them to book tutors, schedule meetings, <br></br> and manage their research projects more efficiently.
+          </p>
+          <div className="flex justify-center items-center space-x-4 px-4 py-6">
+          <Link href="/auth/login" className="bg-white text-slate-700 px-6 py-3 rounded-md shadow-md hover:bg-[#DAEAFF] hover:text-blue-500 transition duration-300">
+            Book an Appointment
+          </Link>
+          <Link href="/auth/login" className="bg-white text-slate-700 px-6 py-3 rounded-md shadow-md hover:bg-[#DAEAFF] hover:text-blue-500 transition duration-300">
+            Post a Service
+          </Link>
+          </div>
         </div>
-      </div>
-
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
       </div>
     </main>
   );
