@@ -1,5 +1,7 @@
 import Link from "next/link";
 import "./globals.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import "/lib/fontawesome.js";
 
 export default function Home() {
   return (
@@ -14,8 +16,8 @@ export default function Home() {
         </svg>  
       </div>
         <div className="text-center text-white">
-          <h2 className="text-2xl font-semibold mb-4">
-            Welcome to Streamlined Researchers
+          <h2 className="text-2xl font-medium mb-4">
+            Welcome to Streamline Researchers
           </h2>
           <p className="text-lg px-20">
             Streamlined Researchers Service offers a comprehensive, cost-effective solution for  <br></br>researchers and scholars,allowing them to book tutors, schedule meetings, <br></br> and manage their research projects more efficiently.
@@ -28,6 +30,23 @@ export default function Home() {
             Post a Service
           </Link>
           </div>
+          <div className="hero-cards">
+          <div className="text-neutral-700 text-left">
+            <p className="font-semibold">How to write a convincing research Introduction.</p>
+            <p className="text-xs">Dr. Amos Oppong</p>
+            <p className="text-sm">Writing an introduction for your research can be a very arduous process, Let me simplify the process for you.</p>
+          </div>
+          <div className="flex items-center space-x-2 mt-2">
+            <ul className="flex space-x-1">
+              <li><FontAwesomeIcon icon="star" className="checked custom-size" /></li>
+              <li><FontAwesomeIcon icon="star" className="checked custom-size" /></li>
+              <li><FontAwesomeIcon icon="star" className="checked custom-size" /></li>
+              <li><FontAwesomeIcon icon="star" className="checked custom-size" /></li>
+              <li><FontAwesomeIcon icon="star" className="checked custom-size" /></li>
+            </ul>
+            <p className="ml-4">$20.00</p>
+          </div>
+        </div>
         </div>
       </div>
     </main>
