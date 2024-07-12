@@ -26,11 +26,11 @@
     rgb(var(--background-start-rgb));
 } */
 
-@layer utilities {
+/* @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
-}
+} */
 
 .body-text {
   color: #3a3a3a;
@@ -55,14 +55,18 @@
 .hero-cards {
   width: 30%;
   padding: 20px;
-  background-color: rgba(255, 255, 255, 0.5); 
-  border: 1px solid #fff; 
-  border-radius: 20px; 
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 1px solid #fff;
+  border-radius: 20px;
   cursor: pointer;
   float: left;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); 
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; 
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
+
 
 .hero-cards:hover {
   transform: translateY(-4px); 
@@ -70,11 +74,11 @@
 }
 
 .checked {
-  color: #ff9f43;
+  color: #2062F0;
 }
 
 .custom-size {
-  font-size: 24px;
+  font-size: 16px;
 }
 
 

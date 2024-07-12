@@ -29,24 +29,59 @@ export default function Home() {
           <Link href="/auth/login" className="bg-white text-slate-700 px-6 py-3 rounded-md shadow-md hover:bg-[#DAEAFF] hover:text-blue-500 transition duration-300">
             Post a Service
           </Link>
+        </div>
+        
+        {/* Service Cards */}
+        <div className="flex justify-center space-x-4">
+          <div className="hero-cards text-neutral-700 text-left p-4 border rounded-lg shadow">
+            <p className="font-semibold">How to write a conference paper.</p>
+            <p className="text-xs">Dr. Amos Oppong</p>
+            <p className="text-sm">Learn the essential steps and techniques to write an effective conference paper that stands out.</p>
+            <div className="flex justify-between items-center mt-2">
+              <ul className="flex space-x-1">
+                <li><FontAwesomeIcon icon="star" className="checked custom-size" /></li>
+                <li><FontAwesomeIcon icon="star" className="checked custom-size" /></li>
+                <li><FontAwesomeIcon icon="star" className="checked custom-size" /></li>
+                <li><FontAwesomeIcon icon="star" className="checked custom-size" /></li>
+                <li><FontAwesomeIcon icon="star" className="checked custom-size" /></li>
+              </ul>
+              <p className="font-semibold">$20.00</p>
+            </div>
           </div>
-          <div className="hero-cards">
-          <div className="text-neutral-700 text-left">
+          
+          <div className="hero-cards text-neutral-700 text-left p-4 border rounded-lg shadow">
             <p className="font-semibold">How to write a convincing research Introduction.</p>
             <p className="text-xs">Dr. Amos Oppong</p>
             <p className="text-sm">Writing an introduction for your research can be a very arduous process, Let me simplify the process for you.</p>
+            <div className="flex justify-between items-center mt-2">
+              <ul className="flex space-x-1">
+                <li><FontAwesomeIcon icon="star" className="checked custom-size" /></li>
+                <li><FontAwesomeIcon icon="star" className="checked custom-size" /></li>
+                <li><FontAwesomeIcon icon="star" className="checked custom-size" /></li>
+                <li><FontAwesomeIcon icon="star" className="checked custom-size" /></li>
+                <li><FontAwesomeIcon icon="star" className="checked custom-size" /></li>
+              </ul>
+              <p className="font-semibold">$20.00</p>
+            </div>
           </div>
-          <div className="flex items-center space-x-2 mt-2">
-            <ul className="flex space-x-1">
-              <li><FontAwesomeIcon icon="star" className="checked custom-size" /></li>
-              <li><FontAwesomeIcon icon="star" className="checked custom-size" /></li>
-              <li><FontAwesomeIcon icon="star" className="checked custom-size" /></li>
-              <li><FontAwesomeIcon icon="star" className="checked custom-size" /></li>
-              <li><FontAwesomeIcon icon="star" className="checked custom-size" /></li>
-            </ul>
-            <p className="ml-4">$20.00</p>
+          
+          <div className="hero-cards text-neutral-700 text-left p-4 border rounded-lg shadow">
+            <p className="font-semibold">How to write an entire research figures</p>
+            <p className="text-xs">Dr. Amos Oppong</p>
+            <p className="text-sm">This guide helps you create and present your research figures in a clear and impactful manner.</p>
+            <div className="flex justify-between items-center mt-2">
+              <ul className="flex space-x-1">
+                <li><FontAwesomeIcon icon="star" className="checked custom-size" /></li>
+                <li><FontAwesomeIcon icon="star" className="checked custom-size" /></li>
+                <li><FontAwesomeIcon icon="star" className="checked custom-size" /></li>
+                <li><FontAwesomeIcon icon="star" className="checked custom-size" /></li>
+                <li><FontAwesomeIcon icon="star" className="checked custom-size" /></li>
+              </ul>
+              <p className="font-semibold">$20.00</p>
+            </div>
           </div>
         </div>
+
         </div>
       </div>
     </main>
