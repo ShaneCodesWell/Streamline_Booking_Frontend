@@ -1,11 +1,12 @@
 import Link from "next/link";
-import "./globals.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import "/lib/fontawesome.js";
+import Image from "next/image";
+import "/styles/custom.css";
 
 export default function Home() {
   return (
-    <main className="px-8">
+    <main className="px-8 pb-1">
       <div className="hero-container">
       <div className="flex justify-center items-center pt-8">
         <svg width="230" height="81" viewBox="0 0 292 84" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -43,9 +44,9 @@ export default function Home() {
                 <li><FontAwesomeIcon icon="star" className="checked custom-size" /></li>
                 <li><FontAwesomeIcon icon="star" className="checked custom-size" /></li>
                 <li><FontAwesomeIcon icon="star" className="checked custom-size" /></li>
-                <li><FontAwesomeIcon icon="star" className="checked custom-size" /></li>
+                <li><FontAwesomeIcon icon="star" className="unchecked custom-size" /></li>
               </ul>
-              <p className="font-semibold">$20.00</p>
+              <p className="font-semibold">$15.00</p>
             </div>
           </div>
           
@@ -75,15 +76,48 @@ export default function Home() {
                 <li><FontAwesomeIcon icon="star" className="checked custom-size" /></li>
                 <li><FontAwesomeIcon icon="star" className="checked custom-size" /></li>
                 <li><FontAwesomeIcon icon="star" className="checked custom-size" /></li>
-                <li><FontAwesomeIcon icon="star" className="checked custom-size" /></li>
+                <li><FontAwesomeIcon icon="star" className="unchecked custom-size" /></li>
               </ul>
-              <p className="font-semibold">$20.00</p>
+              <p className="font-semibold">$25.00</p>
             </div>
           </div>
         </div>
 
         </div>
       </div>
+
+      {/* Trusted Companies */}
+        <div className="py-10">
+          <div className="flex justify-center body-text pb-6">
+            <p className="font-semibold">Trusted Companies</p>
+          </div>
+          <div className="banner">
+            <div className="icon-container">
+              <Image className="icon" src="/assets/images/cl-1.png" alt="Company 1" width={100} height={100} />
+              <Image className="icon" src="/assets/images/cl-2.png" alt="Company 2" width={100} height={100} />
+              <Image className="icon" src="/assets/images/cl-3.png" alt="Company 3" width={100} height={100} />
+              <Image className="icon" src="/assets/images/cl-4.png" alt="Company 4" width={50} height={50} />
+              <Image className="icon" src="/assets/images/cl-5.png" alt="Company 5" width={100} height={100} />
+              <Image className="icon" src="/assets/images/cl-6.png" alt="Company 6" width={100} height={100} />
+              <Image className="icon" src="/assets/images/cl-7.png" alt="Company 7" width={100} height={100} />
+
+              {/* Duplicating the logos */}
+              <Image className="icon" src="/assets/images/cl-1.png" alt="Company 1" width={100} height={100} />
+              <Image className="icon" src="/assets/images/cl-2.png" alt="Company 2" width={100} height={100} />
+              <Image className="icon" src="/assets/images/cl-3.png" alt="Company 3" width={100} height={100} />
+              <Image className="icon" src="/assets/images/cl-4.png" alt="Company 4" width={50} height={50} />
+              <Image className="icon" src="/assets/images/cl-5.png" alt="Company 5" width={100} height={100} />
+              <Image className="icon" src="/assets/images/cl-6.png" alt="Company 6" width={100} height={100} />
+              <Image className="icon" src="/assets/images/cl-7.png" alt="Company 7" width={100} height={100} />
+            </div>
+          </div>
+        </div>
+
+      {/* Application Stats */}
+      <div className="gradient-div">
+
+      </div>
+
     </main>
   );
 }

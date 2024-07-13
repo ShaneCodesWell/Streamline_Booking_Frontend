@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import "/styles/custom.css";
 import Link from "next/link";
 import Image from "next/image";
 import { config } from '@fortawesome/fontawesome-svg-core';
