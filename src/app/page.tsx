@@ -1,40 +1,12 @@
+"use client";
 import Link from "next/link";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import "/lib/fontawesome.js";
 import Image from "next/image";
 import "/styles/custom.css";
-import React, { useState, useEffect } from 'react';
+import StatItem from '@/components/StatItem';
 
-export default function Home() {
-
-  // interface CountdownProps {
-  //   finalNumber: number;
-  // }
-  
-  // const Countdown: React.FC<CountdownProps> = ({ finalNumber }) => {
-  //   const [currentNumber, setCurrentNumber] = useState(0);
-  
-  //   useEffect(() => {
-  //     const interval = setInterval(() => {
-  //       const randomNumber = Math.floor(Math.random() * (finalNumber + 1));
-  //       setCurrentNumber(randomNumber);
-  
-  //       if (randomNumber >= finalNumber) {
-  //         clearInterval(interval);
-  //         setCurrentNumber(finalNumber);
-  //       }
-  //     }, 100);
-  
-  //     return () => clearInterval(interval);
-  //   }, [finalNumber]);
-  
-  //   return (
-  //     <div>
-  //       <p>{currentNumber}</p>
-  //     </div>
-  //   );
-  // };
-  
+export default function Home() {  
 
   return (
     <main className="px-8 pb-1">
@@ -146,26 +118,11 @@ export default function Home() {
 
       {/* Application Stats */}
       <div className="gradient-div">
-        <div className="stat-item">
-          <p className="text-7xl text-center text-white pb-8">33</p>
-          <p className="text-sm text-center text-white">BOOKED SERVICES</p>
-        </div>
-        <div className="stat-item">
-        <p className="text-7xl text-center text-white pb-8">8</p>
-          <p className="text-sm text-center text-white">NEW SERVICES</p>
-        </div>
-        <div className="stat-item">
-          <p className="text-7xl text-center text-white pb-8">5</p>
-          <p className="text-sm text-center text-white">AMAZING DEALS</p>
-        </div>
-        <div className="stat-item">
-          <p className="text-7xl text-center text-white pb-8">11</p>
-          <p className="text-sm text-center text-white">RESEARCH INSTITUTIONS</p>
-        </div>
-        <div className="stat-item">
-          <p className="text-7xl text-center text-white pb-8">30</p>
-          <p className="text-sm text-center text-white ">HAPPY CUSTOMERS</p>
-        </div>
+      <StatItem end={33} title="BOOKED SERVICES" />
+      <StatItem end={200} title="NEW SERVICES" />
+      <StatItem end={115} title="AMAZING DEALS" />
+      <StatItem end={81} title="RESEARCH INSTITUTIONS" />
+      <StatItem end={30} title="HAPPY CUSTOMERS" />
       </div>
 
 
