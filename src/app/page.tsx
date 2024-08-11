@@ -168,7 +168,7 @@ export default function Home() {
 
       {/* Article Spotlight */}
       <div className="px-16">
-        <div className="py-8">
+        <div className="py-10">
           <p className="text-2xl font-semibold text-neutral-700 pb-8">Article Spotlight</p>
           {/* Banner Card */}
         <div className="blue-banner">
@@ -225,7 +225,57 @@ export default function Home() {
             </div>
           </div>
 
-          
+        {/* Researchers */}
+        <div className="flex space-x-6 pt-10">
+          <div className="researcher-tab tab-1">
+            <div className="researcher-overlay">
+              <div className="researcher-info">
+                <p className="researcher-name">Dr. John Doe</p>
+                <p className="researcher-title">Senior Research Scientist</p>
+              </div>
+            </div>
+          </div>
+          <div className="researcher-tab tab-2">
+            <div className="researcher-overlay">
+              <div className="researcher-info">
+                <p className="researcher-name">Dr. John Doe</p>
+                <p className="researcher-title">Senior Research Scientist</p>
+              </div>
+            </div>
+          </div>
+          <div className="researcher-tab tab-3">
+            <div className="researcher-overlay">
+              <div className="researcher-info">
+                <p className="researcher-name">Dr. John Doe</p>
+                <p className="researcher-title">Senior Research Scientist</p>
+              </div>
+            </div>
+          </div>
+          <div className="researcher-tab tab-4">
+            <div className="researcher-overlay">
+              <div className="researcher-info">
+                <p className="researcher-name">Dr. John Doe</p>
+                <p className="researcher-title">Senior Research Scientist</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      {/* Book Section */}
+      <div className="py-12">
+          {/* Banner Card */}
+          <div className="blue-banner-2">
+            <div className="blue-banner-2-overlay">
+              <div className="text-container">
+                <p className="text-4xl text-white">Papers That Matter: Spotlight on Our Academic Contributors</p>
+                <p className="text-base text-white pt-5">Welcome to our intellectual voyage! In this section, we delve into the heart of research, where curiosity meets revelation. Whether you’re a seasoned scholar or a curious explorer, prepare to be captivated by the following publications.</p>
+                <button className="publication-button">Explore Publications</button>
+              </div>
+              <Image src="/assets/images/Publication.png" alt="Article Image" className="banner-image" width={1108} height={1024} />
+            </div>
+          </div>
+      </div>
+
 
 
       </div>
