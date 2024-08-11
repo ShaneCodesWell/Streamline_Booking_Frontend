@@ -168,14 +168,12 @@ export default function Home() {
 
       {/* Article Spotlight */}
       <div className="px-16">
-        <div className="py-10">
-          <p className="text-2xl font-semibold text-neutral-700">Article Spotlight</p>
-        </div>
-
-        {/* Article Card */}
+        <div className="py-8">
+          <p className="text-2xl font-semibold text-neutral-700 pb-8">Article Spotlight</p>
+          {/* Banner Card */}
         <div className="blue-banner">
           <div className="blue-banner-overlay">
-            <Image src="/assets/images/article-image.png" alt="Article Image" className="banner-image" width={100} height={100} />
+            <Image src="/assets/images/Banner-1.png" alt="Article Image" className="banner-image" width={1108} height={1024} />
             <div className="text-container">
               <p className="text-4xl  text-white">Illuminating Discoveries: Dive into Research Articles</p>
               <p className="text-base text-white pt-5">Welcome to our intellectual voyage! In this section, we delve into the heart of research, where curiosity meets revelation. Whether you’re a seasoned scholar or a curious explorer, prepare to be captivated by the following research journals.</p>
@@ -184,32 +182,53 @@ export default function Home() {
         </div>
 
         {/* Article Cards */}
-        <div>
+        <div className="flex space-x-6 pt-10">
           <div className="article-card">
-            <p>Forecasting Renewable Energy Consumption under Zero Assumptions</p>
-            <p>Renewable energy, as an environmentally friendly and sustainable source of energy, is key to realizing the nationally determined contributions of the United States (US) to the December 2015 Paris agreement. Policymakers in the US rely on energy forecasts to draft and...</p>
+            <h2 className="article-title">Forecasting Renewable Energy Consumption under Zero Assumptions</h2>
+            <p className="article-body">
+              Renewable energy, as an environmentally friendly and sustainable source of energy, is key to realizing the nationally determined contributions of the United States (US) to the December 2015 Paris agreement. Policymakers in the US rely on energy forecasts to draft and...
+            </p>
+            <Link href="#" className="read-more">Read More</Link>
           </div>
+
+          <div className="article-card">
+            <h2 className="article-title">Forecasting Renewable Energy Consumption under Zero Assumptions</h2>
+            <p className="article-body">
+              Renewable energy, as an environmentally friendly and sustainable source of energy, is key to realizing the nationally determined contributions of the United States (US) to the December 2015 Paris agreement. Policymakers in the US rely on energy forecasts to draft and...
+            </p>
+            <Link href="#" className="read-more">Read More</Link>
+          </div>
+
+          <div className="article-card">
+            <h2 className="article-title">Forecasting Renewable Energy Consumption under Zero Assumptions</h2>
+            <p className="article-body">
+              Renewable energy, as an environmentally friendly and sustainable source of energy, is key to realizing the nationally determined contributions of the United States (US) to the December 2015 Paris agreement. Policymakers in the US rely on energy forecasts to draft and...
+            </p>
+            <Link href="#" className="read-more">Read More</Link>
+          </div>
+        </div>
         </div>
 
         {/* Researchers Spotlight */}
-        <div className="px-16">
-          <div className="py-10">
-            <p className="text-2xl font-semibold text-neutral-700">Researchers Spotlight</p>
-          </div>
+          <div className="py-8">
+            <p className="text-2xl font-semibold text-neutral-700 pb-8">Researchers Spotlight</p>
 
-          {/* Article Card */}
-          <div className="blue-banner">
-            <div className="blue-banner-overlay">
-              <Image src="/assets/images/article-image.png" alt="Article Image" className="banner-image" width={100} height={100} />
-              <div className="text-container">
-                <p className="text-4xl  text-white">Minds Illuminated: Celebrating Pioneering Research Minds</p>
-                <p className="text-base text-white pt-5">Welcome to our intellectual voyage! In this section, we delve into the heart of research, where curiosity meets revelation. Whether you’re a seasoned scholar or a curious explorer, prepare to be captivated by our expert researchers.</p>
+              {/* Article Card */}
+            <div className="blue-banner">
+              <div className="blue-banner-overlay">
+                <Image src="/assets/images/Banner-2.png" alt="Article Image" className="banner-image" width={1108} height={1024} />
+                <div className="text-container">
+                  <p className="text-4xl  text-white">Minds Illuminated: Celebrating Pioneering Research Minds</p>
+                  <p className="text-base text-white pt-5">Welcome to our intellectual voyage! In this section, we delve into the heart of research, where curiosity meets revelation. Whether you’re a seasoned scholar or a curious explorer, prepare to be captivated by our expert researchers.</p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
 
+          
+
+
+      </div>
     </main>
   );
 }
