@@ -278,16 +278,43 @@ export default function Home() {
               <Image src="/assets/images/Publication.png" alt="Article Image" className="banner-image" width={1108} height={1024} />
             </div>
           </div>
-        <div className="px-16 py-10">
+        <div className="pt-32 pb-6">
           <p className="text-2xl font-semibold text-neutral-700">Explore Some of the Researchers Best Publications</p>
           <p className="text-neutral-700 pt-4">Unlock the power of our platform! Dive into a world of cutting-edge features designed to elevate your research experience. Whether you’re a seasoned researcher or an aspiring scholar, our tools empower you to explore, connect, and thrive.</p>
         </div>
 
         {/* Book Showcase */}
-        
+        <div className="flex flex-wrap justify-between px-4 py-10">
+          <div className="pub-card">
+            <div className="imageContainer">
+              <Image src="/assets/images/bookcover.jpg" alt="Publication Image" width={450} height={720} className="pub-image" />
+            </div>
+            <div className="pub-textContainer">
+              <h2 className="pub-title">Outliers: The Story of Success</h2>
+              <h3 className="pub-author">Malcolm Gladwell</h3>
+              <p className="pub-description">In this thought-provoking book, Malcolm Gladwell explores the factors that contribute to extraordinary success. From cultural background to timing, Gladwell uncovers hidden patterns that shape outliers—individuals who defy norms and achieve greatness.</p>
+            </div> 
+          </div>
+          <div className="pub-card">
+            <div className="imageContainer">
+              <Image src="/assets/images/bookcover.jpg" alt="Publication Image" width={450} height={720} className="pub-image" />
+            </div>
+            <div className="pub-textContainer">
+              <h2 className="pub-title">Outliers: The Story of Success</h2>
+              <h3 className="pub-author">Malcolm Gladwell</h3>
+              <p className="pub-description">In this thought-provoking book, Malcolm Gladwell explores the factors that contribute to extraordinary success. From cultural background to timing, Gladwell uncovers hidden patterns that shape outliers—individuals who defy norms and achieve greatness.</p>
+            </div> 
+          </div>
+        </div>
       </div>
 
-
+      {/* Blogs */}
+      <div>
+        <div className="py-24">
+          <p className="text-2xl font-semibold text-neutral-700">Latest Blogs</p>
+          <p className="text-neutral-700 pt-4">Unlock the power of our platform! Dive into a world of cutting-edge features designed to elevate your research experience. Whether you’re a seasoned researcher or an aspiring scholar, our tools empower you to explore, connect, and thrive.</p>
+        </div>
+      </div>
 
       </div>
     </main>
