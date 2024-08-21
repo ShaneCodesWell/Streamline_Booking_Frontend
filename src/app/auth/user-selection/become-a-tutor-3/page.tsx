@@ -1,12 +1,12 @@
 "use client";
 import { useRouter } from 'next/navigation';
 
-export default function BecomeATutor () {
+export default function BecomeATutorStep2 () {
 
     const router = useRouter();
 
     const handleNextStep = () => {
-        router.push('/auth/user-selection/become-a-tutor-2');
+        router.push('/tutor/dashboard');
     };
 
     return (
@@ -19,40 +19,40 @@ export default function BecomeATutor () {
                 {/* Field 1 */}
                 <div className="pb-4">
                     <h2 className="text-lg font-medium text-gray-700 pb-2">
-                        Educational Background
+                        Research Identification Questions
                     </h2>
                     <p className="pt-2 text-gray-700">
-                        Highest Degree Attained
+                        Do you have an ORCID iD? If yes, please provide it.
                     </p>
                     <div className="pt-4">
-                        <input type="text" placeholder="Enter your text" className="w-full p-3 mb-4 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" required/>
+                        <input type="text" placeholder="Enter your text" className="w-full p-3 mb-4 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" />
                     </div>
                 </div>
                 {/* Field 2 */}
                 <div className="pb-4">
                     <p className="pt-2 text-gray-700">
-                        Field of Study
+                        Have you published any research papers or articles with DOIs? If yes, please list them.
                     </p>
                     <div className="pt-4">
-                        <input type="text" placeholder="Enter your text" className="w-full p-3 mb-4 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" required/>
+                        <input type="text" placeholder="Enter your text" className="w-full p-3 mb-4 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" />
                     </div>
                 </div>
                 {/* Field 3 */}
                 <div className="pb-4">
                     <p className="pt-2 text-gray-700">
-                        University/Institution Name
+                        Are there any other research identifiers or profiles you maintain? (e.g., ResearchGate, Scopus Author ID, Google Scholar Profile)
                     </p>
                     <div className="pt-4">
-                        <input type="text" placeholder="Enter your text" className="w-full p-3 mb-4 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" required/>
+                        <input type="text" placeholder="Enter your text" className="w-full p-3 mb-4 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" />
                     </div>
                 </div>
                 {/* Field 4 */}
                 <div className="pb-4">
                     <p className="pt-2 text-gray-700">
-                        Graduation Year
+                        Can you provide references from previous research mentors or colleagues?
                     </p>
                     <div className="pt-4">
-                        <input type="text" placeholder="Enter your text" className="w-full p-3 mb-4 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" required/>
+                        <input type="text" placeholder="Enter your text" className="w-full p-3 mb-4 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" />
                     </div>
                 </div>
                     

@@ -30,7 +30,7 @@ export default function RootLayout({
             </div>
             <ul style={{ listStyleType: 'none', display: 'flex', gap: '1rem', flex: 2, justifyContent: 'center' }}>
               <li><Link href="#" className="body-text">Find Tutors</Link></li>
-              <li><Link href="#" className="body-text">Become a Tutor</Link></li>
+              <li><Link href="/auth/user-selection/become-a-tutor" className="body-text">Become a Tutor</Link></li>
               <li><Link href="/contacts" className="body-text">Contact Us</Link></li>
               <li><Link href="/about" className="body-text">About Us</Link></li>
             </ul>
