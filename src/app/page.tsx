@@ -278,7 +278,7 @@ export default function Home() {
               <Image src="/assets/images/Publication.png" alt="Article Image" className="banner-image" width={1108} height={1024} />
             </div>
           </div>
-        <div className="pt-32 pb-6">
+        <div className="pt-12 pb-6">
           <p className="text-2xl font-semibold text-neutral-700">Explore Some of the Researchers Best Publications</p>
           <p className="text-neutral-700 pt-4">Unlock the power of our platform! Dive into a world of cutting-edge features designed to elevate your research experience. Whether you’re a seasoned researcher or an aspiring scholar, our tools empower you to explore, connect, and thrive.</p>
         </div>
@@ -309,10 +309,42 @@ export default function Home() {
       </div>
 
       {/* Blogs */}
-      <div>
-        <div className="py-24">
-          <p className="text-2xl font-semibold text-neutral-700">Latest Blogs</p>
-          <p className="text-neutral-700 pt-4">Unlock the power of our platform! Dive into a world of cutting-edge features designed to elevate your research experience. Whether you’re a seasoned researcher or an aspiring scholar, our tools empower you to explore, connect, and thrive.</p>
+        <div className="pt-12 pb-6">
+          <p className="text-2xl font-semibold text-neutral-700">Explore Our Research Blogs</p>
+        </div>
+        {/* Single-Blog */}
+      <div className="flex flex-wrap gap-4 justify-center">
+        <div className="blog-card">
+          <Image src="/assets/images/blog-1.png" width={720} height={1024} alt="Blog 1" className="blog-image"/>
+          <div className="blog-content">
+            <h2 className="blog-title">Exploring the Impact of Artificial Intelligence on Healthcare</h2>
+            <p className="blog-description">A brief summary of the blog post. This is where you provide a preview of the content to entice readers to click through and read more.</p>
+            <a href="#" className="read-more">Read More</a>
+          </div>
+        </div>
+        <div className="blog-card">
+          <Image src="/assets/images/blog-1.png" width={720} height={1024} alt="Blog 1" className="blog-image"/>
+          <div className="blog-content">
+            <h2 className="blog-title">The Future of Remote Work: Trends and Challenges</h2>
+            <p className="blog-description">A brief summary of the blog post. This is where you provide a preview of the content to entice readers to click through and read more.</p>
+            <a href="#" className="read-more">Read More</a>
+          </div>
+        </div>
+        <div className="blog-card">
+          <Image src="/assets/images/blog-1.png" width={720} height={1024} alt="Blog 1" className="blog-image"/>
+          <div className="blog-content">
+            <h2 className="blog-title">Understanding Blockchain Technology: Beyond Cryptocurrencies</h2>
+            <p className="blog-description">A brief summary of the blog post. This is where you provide a preview of the content to entice readers to click through and read more.</p>
+            <a href="#" className="read-more">Read More</a>
+          </div>
+        </div>
+        <div className="blog-card">
+          <Image src="/assets/images/blog-1.png" width={720} height={1024} alt="Blog 1" className="blog-image"/>
+          <div className="blog-content">
+            <h2 className="blog-title">The Rise of Sustainable Fashion: Eco-Friendly Trends in the Industry</h2>
+            <p className="blog-description">A brief summary of the blog post. This is where you provide a preview of the content to entice readers to click through and read more.</p>
+            <a href="#" className="read-more">Read More</a>
+          </div>
         </div>
       </div>
 
