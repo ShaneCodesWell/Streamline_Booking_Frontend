@@ -10,7 +10,7 @@ export default function Home() {
 
   return (
     <main className="pb-1">
-      <div className="px-16">
+      <div className="px-16 flex justify-center items-center">
         <div className="hero-container">
           <div className="flex justify-center items-center pt-8">
             <svg width="230" height="81" viewBox="0 0 292 84" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -119,7 +119,7 @@ export default function Home() {
       </div>
 
       {/* Application Stats */}
-      <div className="px-16">
+      <div className="px-16 flex justify-center items-center">
         <div className="gradient-div">
           <StatItem end={33} title="BOOKED SERVICES" />
           <StatItem end={200} title="NEW SERVICES" />
@@ -131,7 +131,7 @@ export default function Home() {
 
       {/* Feature Showcase */}
       <div className="pt-24">
-        <div className="px-16">
+        <div className="px-20">
           <p className="text-2xl font-semibold text-neutral-700">Feature Showcase: Where Innovation Meets Functionality</p>
           <p className="text-neutral-700 pt-4">Unlock the power of our platform! Dive into a world of cutting-edge features designed to elevate your research experience. Whether you’re a seasoned researcher or an aspiring scholar, our tools empower you to explore, connect, and thrive.</p>
         </div>
@@ -171,22 +171,24 @@ export default function Home() {
       </div>
 
       {/* Article Spotlight */}
-      <div className="px-16">
+      <div className="px-20">
         <div className="py-10">
           <p className="text-2xl font-semibold text-neutral-700 pb-8">Article Spotlight</p>
           {/* Banner Card */}
-        <div className="blue-banner">
-          <div className="blue-banner-overlay">
-            <Image src="/assets/images/Banner-1.png" alt="Article Image" className="banner-image" width={1108} height={1024} />
-            <div className="text-container">
-              <p className="text-4xl  text-white">Illuminating Discoveries: Dive into Research Articles</p>
-              <p className="text-base text-white pt-5">Welcome to our intellectual voyage! In this section, we delve into the heart of research, where curiosity meets revelation. Whether you’re a seasoned scholar or a curious explorer, prepare to be captivated by the following research journals.</p>
+        <div className="flex justify-center items-center">
+          <div className="blue-banner">
+            <div className="blue-banner-overlay">
+              <Image src="/assets/images/Banner-1.png" alt="Article Image" className="banner-image" width={1108} height={1024} />
+              <div className="text-container">
+                <p className="text-4xl  text-white">Illuminating Discoveries: Dive into Research Articles</p>
+                <p className="text-base text-white pt-5">Welcome to our intellectual voyage! In this section, we delve into the heart of research, where curiosity meets revelation. Whether you’re a seasoned scholar or a curious explorer, prepare to be captivated by the following research journals.</p>
+              </div>
             </div>
           </div>
         </div>
 
         {/* Article Cards */}
-        <div className="flex space-x-6 pt-10">
+        <div className="flex justify-center items-center space-x-6 pt-10">
           <div className="article-card">
             <h2 className="article-title">Forecasting Renewable Energy Consumption under Zero Assumptions</h2>
             <p className="article-body">
@@ -215,15 +217,17 @@ export default function Home() {
 
         {/* Researchers Spotlight */}
           <div className="py-8">
-            <p className="text-2xl font-semibold text-neutral-700 pb-8">Researchers Spotlight</p>
+            <p className="text-2xl font-semibold text-neutral-700 pb-8 text-justify">Researchers Spotlight</p>
 
               {/* Article Card */}
-            <div className="blue-banner">
-              <div className="blue-banner-overlay">
-                <Image src="/assets/images/Banner-2.png" alt="Article Image" className="banner-image" width={1108} height={1024} />
-                <div className="text-container">
-                  <p className="text-4xl  text-white">Minds Illuminated: Celebrating Pioneering Research Minds</p>
-                  <p className="text-base text-white pt-5">Welcome to our intellectual voyage! In this section, we delve into the heart of research, where curiosity meets revelation. Whether you’re a seasoned scholar or a curious explorer, prepare to be captivated by our expert researchers.</p>
+            <div className="flex justify-center items-center">
+              <div className="blue-banner">
+                <div className="blue-banner-overlay">
+                  <Image src="/assets/images/Banner-2.png" alt="Article Image" className="banner-image" width={1108} height={1024} />
+                  <div className="text-container">
+                    <p className="text-4xl  text-white">Minds Illuminated: Celebrating Pioneering Research Minds</p>
+                    <p className="text-base text-white pt-5">Welcome to our intellectual voyage! In this section, we delve into the heart of research, where curiosity meets revelation. Whether you’re a seasoned scholar or a curious explorer, prepare to be captivated by our expert researchers.</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -268,23 +272,25 @@ export default function Home() {
       {/* Publication Showcase */}
       <div className="pt-24">
         {/* Banner Card */}
-        <div className="blue-banner-2">
-            <div className="blue-banner-2-overlay">
-              <div className="text-container">
-                <p className="text-4xl text-white">Papers That Matter: Spotlight on Our Academic Contributors</p>
-                <p className="text-base text-white pt-5">Welcome to our intellectual voyage! In this section, we delve into the heart of research, where curiosity meets revelation. Whether you’re a seasoned scholar or a curious explorer, prepare to be captivated by the following publications.</p>
-                <button className="publication-button">Explore Publications</button>
+          <div className="flex justify-center items-center">
+            <div className="blue-banner-2">
+              <div className="blue-banner-2-overlay">
+                <div className="text-container">
+                  <p className="text-4xl text-white">Papers That Matter: Spotlight on Our Academic Contributors</p>
+                  <p className="text-base text-white pt-5">Welcome to our intellectual voyage! In this section, we delve into the heart of research, where curiosity meets revelation. Whether you’re a seasoned scholar or a curious explorer, prepare to be captivated by the following publications.</p>
+                  <button className="publication-button">Explore Publications</button>
+                </div>
+                <Image src="/assets/images/Publication.png" alt="Article Image" className="banner-image" width={1108} height={1024} />
               </div>
-              <Image src="/assets/images/Publication.png" alt="Article Image" className="banner-image" width={1108} height={1024} />
             </div>
           </div>
-        <div className="pt-12 pb-6">
+        <div className="px-10 pt-12 pb-6">
           <p className="text-2xl font-semibold text-neutral-700">Explore Some of the Researchers Best Publications</p>
           <p className="text-neutral-700 pt-4">Unlock the power of our platform! Dive into a world of cutting-edge features designed to elevate your research experience. Whether you’re a seasoned researcher or an aspiring scholar, our tools empower you to explore, connect, and thrive.</p>
         </div>
 
         {/* Book Showcase */}
-        <div className="flex flex-wrap justify-between px-4 py-10">
+        <div className="flex justify-center items-center gap-4 px-4 py-10">
           <div className="pub-card">
             <div className="imageContainer">
               <Image src="/assets/images/bookcover.jpg" alt="Publication Image" width={450} height={720} className="pub-image" />
@@ -309,11 +315,11 @@ export default function Home() {
       </div>
 
       {/* Blogs */}
-        <div className="pt-12 pb-6">
+        <div className="px-20 pt-12 pb-6">
           <p className="text-2xl font-semibold text-neutral-700">Explore Our Research Blogs</p>
         </div>
         {/* Single-Blog */}
-      <div className="flex flex-wrap gap-4 justify-center">
+      <div className="flex flex-wrap gap-4 justify-center items-center">
         <div className="blog-card">
           <Image src="/assets/images/blog-1.png" width={720} height={1024} alt="Blog 1" className="blog-image"/>
           <div className="blog-content">
