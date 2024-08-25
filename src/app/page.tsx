@@ -132,9 +132,11 @@ export default function Home() {
       {/* Feature Showcase */}
       <div className="pt-24">
         <div className="px-20">
-          <p className="text-2xl font-semibold text-neutral-700">Feature Showcase: Where Innovation Meets Functionality</p>
-          <p className="text-neutral-700 pt-4">Unlock the power of our platform! Dive into a world of cutting-edge features designed to elevate your research experience. Whether you’re a seasoned researcher or an aspiring scholar, our tools empower you to explore, connect, and thrive.</p>
-        </div>
+          <div className="hero-textContainer">
+            <p className="text-2xl font-semibold text-neutral-700">Feature Showcase: Where Innovation Meets Functionality</p>
+            <p className="text-neutral-700 pt-4">Unlock the power of our platform! Dive into a world of cutting-edge features designed to elevate your research experience. Whether you’re a seasoned researcher or an aspiring scholar, our tools empower you to explore, connect, and thrive.</p>
+          </div>
+          </div>
         {/* Feature Cards */}
         <div className="py-10">
           <section className="feature-showcase">

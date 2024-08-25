@@ -1,19 +1,18 @@
-"use client"; // Ensure this directive is present
-
-import { useState } from 'react';
-import { Inter } from "next/font/google";
+"use client";
 import "./globals.css";
 import "/styles/custom.css";
 import Link from "next/link";
 import Image from "next/image";
+import { useState } from 'react';
+import { Roboto } from "next/font/google";
 import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import LoginPopup from '../components/LoginPopup';
-import SignupPopup from '../components/SignupPopup'; // Adjust the import path as needed
+import SignupPopup from '../components/SignupPopup';
 
 config.autoAddCss = false;
 
-const inter = Inter({ subsets: ["latin"] });
+const roboto = Roboto({ subsets: ["latin"], weight: ["400", "500", "700"] });
 
 export default function RootLayout({
   children,
