@@ -47,10 +47,6 @@
 }
 
 /* Our-Vision */
-.visionSection, .missionSection {
-  opacity: 1 !important;
-  transform: translateY(0) !important;
-}
 .visionSection {
   display: flex;
   align-items: center;
@@ -63,6 +59,7 @@
   transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
+/* Our-Mission */
 .missionSection {
   display: flex;
   align-items: center;
@@ -137,6 +134,46 @@
   }
 }
 
+/* Meet the Team Section */
+.meetTheTeamSection {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.cardContainer {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.cardWrapper {
+  position: relative;
+  height: 400px;
+}
+
+.card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease, z-index 0s;
+}
+
+.cardFront {
+  transform: scale(1);
+  z-index: 2;
+}
+
+.cardBack {
+  transform: scale(0.8);
+  z-index: 1;
+  top: 60px;
+  left: 20px;
+}
 
 /* Team Card */
 .profileCard {
@@ -150,6 +187,7 @@
   margin: 20px auto;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
+  position: relative;
 }
 
 .profileImage {
@@ -198,6 +236,38 @@
 .divider {
   border: 0;
   height: 1px;
-  background: #BDDBFF; /* Adjust the color as needed */
-  margin: 10px 0; /* Adjust spacing as needed */
+  background: #BDDBFF;
+  margin: 10px 0;
+}
+
+/* Parent container for the button */
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px; /* Optional margin */
+}
+
+/* See More Button */
+.seeMore {
+  background-color: white;
+  border: 1px solid #5CA5FE;
+  color: #5CA5FE;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 15px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.seeMore:hover {
+  background-color: #DAEAFF;
+  border-color: #3782FB;
+  color: #3782FB;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.seeMore:focus {
+  outline: none;
 }
