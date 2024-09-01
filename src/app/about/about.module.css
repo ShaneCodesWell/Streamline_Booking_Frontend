@@ -5,7 +5,7 @@
   background-position: center;
   position: relative;
   width: 100%;
-  height: 550px;
+  height: 600px;
   border-radius: 30px;
   display: flex;
   align-items: center;
@@ -20,7 +20,7 @@
   padding: 20px;
   border-radius: 10px;
   animation: fadeInUp 1.5s ease-out;
-  padding: 0 150px;
+  max-width: 75%;
 }
 
 .header {
@@ -147,6 +147,7 @@
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
+  animation: ease-in 3s;
 }
 
 .cardWrapper {
@@ -164,15 +165,40 @@
 }
 
 .cardFront {
-  transform: scale(1);
+  transition: transform 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55),
+              z-index 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55),
+              opacity 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55);
   z-index: 2;
+  opacity: 1;
 }
 
 .cardBack {
-  transform: scale(0.8);
+  transform: scale(0.9);  /* Slightly larger scale for the card in the background */
   z-index: 1;
-  top: 60px;
-  left: 20px;
+  top: 50px; /* Make sure it's visible behind */
+  left: 10px;
+  opacity: 0.8; /* Ensure it's visible behind the first card */
+  transition: transform 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55), 
+              top 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55),
+              left 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55),
+              z-index 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55), 
+              opacity 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.cardActive {
+  transform: scale(1);
+  z-index: 2;
+  top: 0;
+  left: 0;
+  opacity: 1;
+}
+
+.cardInactive {
+  transform: scale(0.9);  /* Keep it slightly larger to see the stack effect */
+  z-index: 1;
+  top: 50px; /* Maintain a slight offset to make it visible */
+  left: 10px;
+  opacity: 0.8;
 }
 
 /* Team Card */
@@ -244,7 +270,7 @@
 .buttonContainer {
   display: flex;
   justify-content: center;
-  margin-top: 10px; /* Optional margin */
+  margin-top: 40px;
 }
 
 /* See More Button */
@@ -271,3 +297,4 @@
 .seeMore:focus {
   outline: none;
 }
+

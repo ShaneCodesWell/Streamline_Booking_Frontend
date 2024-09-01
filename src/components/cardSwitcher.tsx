@@ -1,18 +1,14 @@
-// src/components/cardSwitcher.tsx
-import React, { useState } from 'react';
+// src/components/CardSwitcher.tsx
+import React from 'react';
 import styles from '../app/about/about.module.css';
 
 interface CardSwitcherProps {
   cards: JSX.Element[];
+  currentCard: number;
+  setCurrentCard: React.Dispatch<React.SetStateAction<number>>;
 }
 
-const CardSwitcher: React.FC<CardSwitcherProps> = ({ cards }) => {
-  const [currentCard, setCurrentCard] = useState(0);
-
-  const handleSeeMoreClick = () => {
-    setCurrentCard((prev) => (prev + 1) % cards.length);
-  };
-
+const CardSwitcher: React.FC<CardSwitcherProps> = ({ cards, currentCard, setCurrentCard }) => {
   return (
     <div className={styles.cardContainer}>
       <div className={styles.cardWrapper}>
@@ -24,11 +20,6 @@ const CardSwitcher: React.FC<CardSwitcherProps> = ({ cards }) => {
             {card}
           </div>
         ))}
-      </div>
-      <div className={styles.buttonContainer}>
-        <button className={styles.seeMore} onClick={handleSeeMoreClick}>
-            See More
-        </button>
       </div>
     </div>
   );

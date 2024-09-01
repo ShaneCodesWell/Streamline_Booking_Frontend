@@ -7,6 +7,12 @@ import styles from './about.module.css';
 
 export default function AboutUs() {
 
+  const [currentCard, setCurrentCard] = useState(0);
+
+  const handleSeeMoreClick = () => {
+    setCurrentCard((prev) => (prev + 1) % cards.length);
+  };
+
   const [isVisionVisible, setIsVisionVisible] = useState(false);
   const [isMissionVisible, setIsMissionVisible] = useState(false);
 
@@ -189,11 +195,16 @@ export default function AboutUs() {
       </section>
 
       {/* Meet the Team */}
-      <section className='pt-20'>
+      <section className='pt-32'>
         <div className='flex justify-center items-center'>
           <h1 className={styles.header}>Meet the <span className='text-sky-600'>Brains</span></h1>
         </div>
-        <CardSwitcher cards={cards} />
+        <CardSwitcher cards={cards} currentCard={currentCard} setCurrentCard={setCurrentCard} />
+        <div className={styles.buttonContainer}>
+          <button className={styles.seeMore} onClick={handleSeeMoreClick}>
+            See More
+          </button>
+        </div>
       </section>
 
       {/* Why Streamline */}
