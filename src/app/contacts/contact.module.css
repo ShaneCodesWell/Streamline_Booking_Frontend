@@ -1,0 +1,38 @@
+/* contact.module.css */
+
+/* Glass card hover effect */
+.cardHover {
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    padding: 24px;
+    width: 320px; /* Adjust as needed */
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+  }
+  
+  .cardHover:hover {
+    transform: scale(1.05);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Fade in effect for contact cards */
+  .fadeIn {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .fadeIn.loaded {
+    opacity: 1;
+  }
+  
+  .textFadeIn {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.6s ease-in, transform 0.6s ease-in;
+  }
+  
+  .textFadeIn.loaded {
+    opacity: 1;
+    transform: translateY(0);
+  }
