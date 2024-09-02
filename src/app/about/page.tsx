@@ -149,7 +149,7 @@ export default function AboutUs() {
           <div className={`${styles.visionSection} ${isVisionVisible ? styles.animate : ''}`}>
             <div className={styles.textContainer}>
               <h2 className={styles.header}>
-                Our <span className='text-sky-600'>Vision</span>
+                Our <span className={styles.headerColor}>Vision</span>
               </h2>
               <p className={styles.subtext}>
                 At STREAMLINE, our vision is to create an inclusive and accessible
@@ -174,7 +174,7 @@ export default function AboutUs() {
           <div className={`${styles.missionSection} ${isMissionVisible ? styles.animate : ''}`}>
             <div className={styles.textContainer}>
               <h2 className={styles.header}>
-                Our <span className='text-sky-600'>Mission</span>
+                Our <span className={styles.headerColor}>Mission</span>
               </h2>
               <p className={styles.subtext}>
                 Our mission is to provide a seamless platform that facilitates
@@ -197,7 +197,7 @@ export default function AboutUs() {
       {/* Meet the Team */}
       <section className='pt-32'>
         <div className='flex justify-center items-center'>
-          <h1 className={styles.header}>Meet the <span className='text-sky-600'>Brains</span></h1>
+          <h1 className={styles.header}>Meet the <span className={styles.headerColor}>Brains</span></h1>
         </div>
         <CardSwitcher cards={cards} currentCard={currentCard} setCurrentCard={setCurrentCard} />
         <div className={styles.buttonContainer}>
@@ -208,11 +208,36 @@ export default function AboutUs() {
       </section>
 
       {/* Why Streamline */}
-      <section className='pt-20'>
+      <section className='pt-32'>
         <div className='flex justify-center items-center'>
-          <h1 className={styles.header}>Why <span className='text-sky-600'>STREAMLINE?</span></h1>
+          <h1 className={styles.header}>Why <span className={styles.headerColor}>STREAMLINE</span>?</h1>
+        </div>
+        <div className={styles.whyStreamlineSection}>
+          <div className={styles.whyCardContainer}>
+            {/* First Row */}
+            <div className={styles.whyCard + ' ' + styles.firstCard}>
+              <h2 className='text-base font-bold text-gray-600'>Collaborative Environment</h2>
+              <p className='text-sm text-gray-500'>Engage in meaningful collaborations that enhance your research projects.</p>
+            </div>
+            <div className={styles.whyCard + ' ' + styles.secondCard}>
+              <h2 className='text-base font-bold text-gray-600'>Expert Connections</h2>
+              <p className='text-sm text-gray-500'>Easily find and connect with experienced researchers in your field of interest.</p>
+            </div>
+
+            {/* Second Row */}
+            <div className={styles.whyCard + ' ' + styles.thirdCard}>
+              <h2 className='text-base font-bold text-gray-600'>User-Friendly Interface</h2>
+              <p className='text-sm text-gray-500'>Enjoy a seamless and intuitive experience designed with your needs in mind.</p>
+            </div>
+            <div className={styles.whyCard + ' ' + styles.fourthCard}>
+              <h2 className='text-base font-bold text-gray-600'>Comprehensive Support Access</h2>
+              <p className='text-sm text-gray-500'>Access resources and guidance tailored to help you succeed in your research endeavors.</p>
+            </div>
+          </div>
         </div>
       </section>
+
+
     </main>
   );
 }
