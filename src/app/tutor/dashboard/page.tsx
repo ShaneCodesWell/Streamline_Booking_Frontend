@@ -1,5 +1,5 @@
 // src/app/tutor/dashboard/page.tsx
-import LayoutLoggedIn from '../../../layouts/layoutLoggedIn';
+import LayoutLoggedIn from '../../../layouts/LoggedInLayout';
 
 export default function TutorDashboard() {
   return (
