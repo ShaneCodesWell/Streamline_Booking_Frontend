@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import CardSwitcher from '../../components/cardSwitcher';
 import styles from './about.module.css';
+import LoggedOutLayout from '@/layouts/LoggedOutLayout';
 
 export default function AboutUs() {
 
@@ -132,15 +133,16 @@ export default function AboutUs() {
   ];
 
   return (
-    <main className="px-10">
-      <div className={styles.aboutContainer}>
-        <div className={styles.textOverlay}>
-          <h1 className='text-white font-semibold text-4xl'>About Us</h1>
-          <p className={styles.about_subtext}>
-            Welcome to STREAMLINE, a pioneering platform dedicated to bridging the gap between aspiring researchers and seasoned experts. Conceived by Dr. Amos Oppong (PhD), an esteemed researcher with a wealth of experience, STREAMLINE aims to revolutionize the way students and junior researchers connect with established professionals in their field.
-          </p>
+    <LoggedOutLayout>
+      <main className="px-10">
+        <div className={styles.aboutContainer}>
+          <div className={styles.textOverlay}>
+            <h1 className='text-white font-semibold text-4xl'>About Us</h1>
+            <p className={styles.about_subtext}>
+              Welcome to STREAMLINE, a pioneering platform dedicated to bridging the gap between aspiring researchers and seasoned experts. Conceived by Dr. Amos Oppong (PhD), an esteemed researcher with a wealth of experience, STREAMLINE aims to revolutionize the way students and junior researchers connect with established professionals in their field.
+            </p>
+          </div>
         </div>
-      </div>
 
       {/* Mission & Vision Section */}
       <section className='px-16'>
@@ -238,6 +240,7 @@ export default function AboutUs() {
       </section>
 
 
-    </main>
+      </main>
+    </LoggedOutLayout>
   );
 }

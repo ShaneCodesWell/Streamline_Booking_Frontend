@@ -38,7 +38,7 @@ export default function LoggedOutLayout({
       <body style={{ margin: 0, padding: 0, display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
         {/* Header */}
         <Header openLoginPopup={openLoginPopup} openSignupPopup={openSignupPopup} /> 
-        <main style={{ flex: 1, padding: '1rem' }}>
+        <main>
           {children}
         </main>
         {/* Footer */}

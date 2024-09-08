@@ -1,12 +1,23 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import "../app/globals.css";
-// import "boxicons/css/boxicons.min.css";  // Import the Boxicons CSS
+import "boxicons/css/boxicons.min.css";
 
 export default function Sidebar() {
   const [isSidebarClosed, setIsSidebarClosed] = useState(true);
   const [isDarkMode, setIsDarkMode] = useState(false);
+
+  useEffect(() => {
+    // Toggle the dark class on the body element when dark mode is switched
+    const body = document.querySelector('body');
+    if (isDarkMode) {
+      body?.classList.add('dark');
+    } else {
+      body?.classList.remove('dark');
+    }
+  }, [isDarkMode]);
 
   const toggleSidebar = () => {
     setIsSidebarClosed(!isSidebarClosed);
@@ -17,11 +28,11 @@ export default function Sidebar() {
   };
 
   return (
-    <nav className={`sidebar ${isSidebarClosed ? "close" : ""} ${isDarkMode ? "dark" : ""}`}>
+    <nav className={`sidebar ${isSidebarClosed ? "close" : ""}`}>
       <header>
         <div className="image-text">
           <span className="image">
-            {/* Add your logo here */}
+            <Image src="/assets/images/Logo.svg" alt="brand-logo" width={60} height={60} />
           </span>
           <div className="text logo-text">
             <span className="name">UserName</span>
@@ -32,10 +43,6 @@ export default function Sidebar() {
       </header>
       <div className="menu-bar">
         <div className="menu">
-          {/* <li className="search-box">
-            <i className='bx bx-search icon'></i>
-            <input type="text" placeholder="Search..." />
-          </li> */}
           <ul className="menu-links">
             <li className="nav-link">
               <Link href="#">
@@ -43,21 +50,15 @@ export default function Sidebar() {
                 <span className="text nav-text">Dashboard</span>
               </Link>
             </li>
-            {/* <li className="nav-link">
-              <Link href="#">
-                <i className='bx bx-bar-chart-alt-2 icon'></i>
-                <span className="text nav-text">Revenue</span>
-              </Link>
-            </li> */}
             <li className="nav-link">
               <Link href="#">
-                <i className='bx bx-bell icon'></i>
+                <i className='bx bx-calendar icon'></i>
                 <span className="text nav-text">Booked Sessions</span>
               </Link>
             </li>
             <li className="nav-link">
               <Link href="#">
-                <i className='bx bx-pie-chart-alt icon'></i>
+                <i className='bx bx-chat icon'></i>
                 <span className="text nav-text">Messages</span>
               </Link>
             </li>
@@ -67,12 +68,6 @@ export default function Sidebar() {
                 <span className="text nav-text">Saved Blogs</span>
               </Link>
             </li>
-            {/* <li className="nav-link">
-              <Link href="#">
-                <i className='bx bx-wallet icon'></i>
-                <span className="text nav-text">Wallets</span>
-              </Link>
-            </li> */}
           </ul>
         </div>
         <div className="bottom-content">
