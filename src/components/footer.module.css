@@ -1,0 +1,134 @@
+.footerBody {
+  position: relative;
+  background: #3682fb;
+  font-family: 'Eras ITC', sans-serif;
+  max-height: 300px; /* Limits the footer height */
+  z-index: 1;
+  overflow: hidden; /* Ensures no overflow of content */
+  margin-top: 20px;
+}
+
+#particles-js {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-height: 300px;
+  z-index: -1; /* Ensure particles are in the background */
+}
+
+.particleWrapper {
+  position: relative;
+  overflow: hidden; /* Ensures the particles stay within the footer bounds */
+  max-height: 300px;
+  width: 100%;
+}
+
+.particlesBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-height: 300px;
+  z-index: -1; /* Sends particles behind the content */
+}
+
+.footerContent {
+  position: relative;
+  z-index: 1; /* Ensures content is above the particles */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  max-height: 300px; /* Keeps content height within the limit */
+}
+
+/* .visit {
+  color: white;
+  font-size: 12px;
+  background: #32333a;
+  padding: 6px 12px;
+  border-radius: 10px;
+  position: fixed;
+  right: 20px;
+  top: 10px;
+} */
+
+.logoContainer {
+  text-align: center;
+  margin-bottom: 1rem; /* Adjusted margin for smaller footer */
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+}
+
+/* .logoContainer h1, 
+.logoContainer h2 {
+  color: white;
+  margin-bottom: 0.5rem;
+} */
+
+.container {
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  padding: 20px 20px;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* .rowCentered {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+} */
+
+.column {
+  width: 48%;
+}
+
+.divider {
+  border-top: 2px solid white; /* Creates the white line */
+  width: 100%; /* Full width line */
+  margin: 10px 0; /* Adds spacing above and below the line */
+  opacity: 50%;
+}
+
+/* .pensPulled h1,
+.postsPulled h1 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+} */
+
+.footerBottom {
+  text-align: center;
+  padding: 1rem 0; /* Adjusted padding for reduced height */
+  background-color: rgba(27, 57, 141, 0.2); /* Background color with 20% opacity */
+  color: #ffff; /* Keep text fully opaque */
+}
+
+
+/* .footerBottom p a {
+  color: #bbbbc4;
+  text-decoration: none;
+  transition: color 0.3s ease;
+} */
+
+/* .footerBottom p a:hover {
+  color: #fc3565;
+} */
+
+/* .oneHalfColumn {
+  width: 48%;
+} */
+
+.footer p {
+  color: white;
+  padding-top: 1rem; /* Adjusted padding for compact height */
+  text-align: center;
+}
