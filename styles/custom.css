@@ -1,10 +1,11 @@
-.body-text {
+/* .body-text {
     color: #3a3a3a;
     font-weight: 400;
-  }
+  } */
   
   .header {
-    background-color: white;
+    background: var(--sidebar-color);
+    transition: var(--tran-05);
   }
   
   .hero-container {

@@ -5,22 +5,22 @@ import Image from "next/image";
 import "../app/globals.css";
 import "boxicons/css/boxicons.min.css";
 
-export default function Sidebar() {
+export default function Sidebar({ onToggle }: { onToggle: (isClosed: boolean) => void }) {
   const [isSidebarClosed, setIsSidebarClosed] = useState(true);
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   useEffect(() => {
-    // Toggle the dark class on the body element when dark mode is switched
-    const body = document.querySelector('body');
+    const body = document.querySelector("body");
     if (isDarkMode) {
-      body?.classList.add('dark');
+      body?.classList.add("dark");
     } else {
-      body?.classList.remove('dark');
+      body?.classList.remove("dark");
     }
   }, [isDarkMode]);
 
   const toggleSidebar = () => {
     setIsSidebarClosed(!isSidebarClosed);
+    onToggle(!isSidebarClosed); // Pass the new state to the parent
   };
 
   const toggleDarkMode = () => {
@@ -30,14 +30,10 @@ export default function Sidebar() {
   return (
     <nav className={`sidebar ${isSidebarClosed ? "close" : ""}`}>
       <header>
-        <div className="image-text">
+        <div className="logo-section">
           <span className="image">
-            <Image src="/assets/images/Logo.svg" alt="brand-logo" width={60} height={60} />
+            <Image src="/assets/images/Logo.svg" alt="brand-logo" width={100} height={100} />
           </span>
-          <div className="text logo-text">
-            <span className="name">UserName</span>
-            <span className="profession">Title</span>
-          </div>
         </div>
         <i className='bx bx-chevron-right toggle' onClick={toggleSidebar}></i>
       </header>

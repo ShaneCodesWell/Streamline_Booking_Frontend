@@ -6,15 +6,21 @@ import '@fortawesome/fontawesome-svg-core/styles.css';
 
 config.autoAddCss = false;
 
-export default function HeaderUser() {
+// Define the props type for HeaderUser
+interface HeaderUserProps {
+  isSidebarClosed: boolean;
+}
+
+export default function HeaderUser({ isSidebarClosed }: HeaderUserProps) {
   return (
-    <header className="header">
+    <header
+      className="header"
+      style={{
+        transition: "margin-left 0.3s ease",
+        marginLeft: isSidebarClosed ? "88px" : "80px",  // Adjust margin based on sidebar state
+      }}
+    >
       <nav className="nav-container">
-        <div className="logo">
-          <Link href="/">
-            <Image src="/assets/images/Logo.svg" alt="brand-logo" width={60} height={60} />
-          </Link>
-        </div>
         <ul className="nav-links">
           <li><Link href="#" className="nav-item">Find Tutors</Link></li>
           <li><Link href="/auth/user-selection/become-a-tutor" className="nav-item">Become a Tutor</Link></li>

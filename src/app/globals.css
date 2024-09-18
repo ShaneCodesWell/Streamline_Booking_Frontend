@@ -7,36 +7,6 @@
   font-family: 'Roboto', sans-serif;
 } */
 
-/* :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-} */
-
 :root{
   /* ===== Colors ===== */
   --body-color: #F6F5FF;
@@ -69,6 +39,10 @@ body.dark{
   --primary-color-light: #3a3b3c;
   --toggle-color: #fff;
   --text-color: #ccc;
+}
+
+.text-text-color {
+  color: var(--text-color);
 }
 
 /* Sidebar */
@@ -119,10 +93,7 @@ body.dark{
   display: flex;
   align-items: center;
   justify-content: center;
-}
-.sidebar header .image img{
-  width: 40px;
-  border-radius: 6px;
+  margin-top: 1rem;
 }
 .sidebar header .toggle{
   position: absolute;
@@ -149,23 +120,6 @@ body.dark .sidebar header .toggle{
 }
 .sidebar .menu{
   margin-top: 40px;
-}
-.sidebar li.search-box{
-  border-radius: 6px;
-  background-color: var(--primary-color-light);
-  cursor: pointer;
-  transition: var(--tran-05);
-}
-.sidebar li.search-box input{
-  height: 100%;
-  width: 100%;
-  outline: none;
-  border: none;
-  background-color: var(--primary-color-light);
-  color: var(--text-color);
-  border-radius: 6px;
-  font-size: 17px;
-  font-weight: 500;
 }
 .sidebar li a{
   list-style: none;
@@ -268,15 +222,14 @@ body.dark .switch::before{
   padding: 12px 60px;
 }
 .sidebar.close ~ .home{
-  left: 78px;
-  width: calc(100% - 78px);
+  left: 88px;
+  width: calc(100% - 88px);
 }
 body.dark .home .text{
   color: var(--text-color);
 }
 
 /* Header styles */
-/* Ensure the header and navigation elements are styled correctly */
 .header {
   background-color: var(--primary-color-light); /* Light mode background */
   transition: var(--tran-05);
