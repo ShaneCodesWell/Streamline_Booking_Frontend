@@ -5,7 +5,7 @@ import "/styles/custom.css";
 import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import HeaderUser from '../components/Header-User';  // Import the Header component
-import Footer from '../components/Footer';  // Import the Footer component
+import AppFooter from '../components/App_Footer';  // Import the Footer component
 import Sidebar from '../components/Sidebar';  // Import the Sidebar component
 
 config.autoAddCss = false;
@@ -31,7 +31,7 @@ export default function LoggedInLayout({
         </main>
 
         {/* Use the Footer component */}
-        <Footer />
+        <AppFooter />
       </body>
     </html>
   );

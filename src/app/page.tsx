@@ -133,7 +133,7 @@ export default function Home() {
 
         {/* Feature Showcase */}
         <div className="pt-24">
-          <div className="px-20">
+          <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-10">
             <div className="hero-textContainer">
               <p className="text-2xl font-semibold text-neutral-700">Feature Showcase: Where Innovation Meets Functionality</p>
               <p className="text-neutral-700 pt-4">Unlock the power of our platform! Dive into a world of cutting-edge features designed to elevate your research experience. Whether you’re a seasoned researcher or an aspiring scholar, our tools empower you to explore, connect, and thrive.</p>
@@ -175,8 +175,8 @@ export default function Home() {
         </div>
 
         {/* Article Spotlight */}
-        <div className="px-20">
-          <div className="py-10">
+        <div className="py-10">
+          <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-10">
             <p className="text-2xl font-semibold text-neutral-700 pb-8">Article Spotlight</p>
             {/* Banner Card */}
           <div className="flex justify-center items-center">
@@ -221,8 +221,9 @@ export default function Home() {
 
           {/* Researchers Spotlight */}
             <div className="py-8">
-              <p className="text-2xl font-semibold text-neutral-700 pb-8 text-justify">Researchers Spotlight</p>
-
+              <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-10">
+                <p className="text-2xl font-semibold text-neutral-700 pb-8 text-justify">Researchers Spotlight</p>
+              </div>
                 {/* Article Card */}
               <div className="flex justify-center items-center">
                 <div className="blue-banner">
@@ -289,8 +290,10 @@ export default function Home() {
               </div>
             </div>
           <div className="px-10 pt-12 pb-6">
-            <p className="text-2xl font-semibold text-neutral-700">Explore Some of the Researchers Best Publications</p>
-            <p className="text-neutral-700 pt-4">Unlock the power of our platform! Dive into a world of cutting-edge features designed to elevate your research experience. Whether you’re a seasoned researcher or an aspiring scholar, our tools empower you to explore, connect, and thrive.</p>
+            <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-10">
+              <p className="text-2xl font-semibold text-neutral-700">Explore Some of the Researchers Best Publications</p>
+              <p className="text-neutral-700 pt-4">Unlock the power of our platform! Dive into a world of cutting-edge features designed to elevate your research experience. Whether you’re a seasoned researcher or an aspiring scholar, our tools empower you to explore, connect, and thrive.</p>
+            </div>
           </div>
 
           {/* Book Showcase */}
@@ -319,7 +322,7 @@ export default function Home() {
         </div>
 
         {/* Blogs */}
-          <div className="px-20 pt-12 pb-6">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-12 pb-6">
             <p className="text-2xl font-semibold text-neutral-700">Explore Our Research Blogs</p>
           </div>
           {/* Single-Blog */}
