@@ -13,13 +13,11 @@ interface HeaderUserProps {
 
 export default function HeaderUser({ isSidebarClosed }: HeaderUserProps) {
   return (
-    <header
-      className="header"
+    <header className="header"
       style={{
         transition: "margin-left 0.3s ease",
         marginLeft: isSidebarClosed ? "88px" : "80px",  // Adjust margin based on sidebar state
-      }}
-    >
+      }}>
       <nav className="nav-container">
         <ul className="nav-links">
           <li><Link href="#" className="nav-item">Find Tutors</Link></li>

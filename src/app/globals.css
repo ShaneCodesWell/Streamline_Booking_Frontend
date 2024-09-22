@@ -82,12 +82,15 @@ body.dark{
   transition: var(--tran-03);
 }
 .sidebar .text{
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 500;
   white-space: nowrap;
 }
 .sidebar.close .text{
   opacity: 0;
+}
+.sidebar header{
+  position: relative;
 }
 .sidebar header .image{
   display: flex;
@@ -233,7 +236,7 @@ body.dark .home .text{
 .header {
   background-color: var(--primary-color-light); /* Light mode background */
   transition: var(--tran-05);
-  padding: 1rem 2rem;
+  padding: 0.5rem 2rem;
 }
 
 .nav-container {
@@ -257,7 +260,7 @@ body.dark .home .text{
 .nav-item {
   color: var(--text-color); /* Use theme text color */
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-weight: 500;
   transition: var(--tran-03);
 }
@@ -270,7 +273,7 @@ body.dark .home .text{
 .profile {
   display: flex;
   align-items: center;
-  gap: 0.5rem; /* Space between profile picture and user name */
+  gap: 1rem; /* Space between profile picture and user name */
 }
 
 .profile-pic {
@@ -280,7 +283,7 @@ body.dark .home .text{
 
 .user-name {
   color: var(--text-color); /* Text color for user name */
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-weight: 500;
 }
 

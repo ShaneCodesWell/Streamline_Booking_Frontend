@@ -32,7 +32,9 @@ export default function Sidebar({ onToggle }: { onToggle: (isClosed: boolean) =>
       <header>
         <div className="logo-section">
           <span className="image">
-            <Image src="/assets/images/Logo.svg" alt="brand-logo" width={100} height={100} />
+            <a href="/">
+              <Image src="/assets/images/Logo.svg" alt="brand-logo" width={100} height={100} />
+            </a>
           </span>
         </div>
         <i className='bx bx-chevron-right toggle' onClick={toggleSidebar}></i>
