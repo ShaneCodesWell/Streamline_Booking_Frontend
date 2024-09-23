@@ -1,0 +1,73 @@
+/* Publication/Book Tabs */
+.pubCard {
+    position: relative;
+    display: flex; /* Flexbox for horizontal alignment */
+    background-color: var(--pub-box-color);
+    border: 1px solid var(--pub-outline-color);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    overflow: visible; /* Ensures the image isn't clipped */
+    padding: 1rem;
+    max-width: 550px; /* Increased max-width */
+    max-height: 300px; /* Increased height */
+    box-sizing: border-box;
+  }
+  
+  .imageContainer {
+    flex-shrink: 0;
+    position: relative; /* Keeps it within the document flow */
+    margin-top: -3rem; /* Raise the image higher */
+    width: 8rem; /* Increased width */
+    height: 12rem; /* Increased height */
+    padding-right: 10px;
+    z-index: 1; /* Ensure the image is above the card */
+  }
+  
+  .pubImage {
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  .pubTextContainer {
+    flex-grow: 1; /* Take up the remaining space */
+    display: flex;
+    flex-direction: column; /* Stack the title, author, and description vertically */
+    justify-content: center; /* Center vertically */
+    overflow: hidden; /* Ensure text doesn't overflow the card */
+    margin: 0;
+  }
+  
+  .pubTitle {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--text-color-2);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .pubAuthor {
+    font-size: 0.875rem; 
+    font-weight: 500;
+    color: #4a5568; /* text-gray-700 */
+    white-space: nowrap; /* Ensure author doesn't wrap */
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .pubDescription {
+    margin-top: 0.5rem;
+    color: #718096; /* text-gray-600 */
+    line-height: 1.2;
+    max-height: 4.8em; /* Limit description to 4 lines */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 14px;
+    display: -webkit-box;
+    -webkit-line-clamp: 4; /* Limits the text to 4 lines */
+    -webkit-box-orient: vertical;
+  }

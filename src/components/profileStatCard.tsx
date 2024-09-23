@@ -1,8 +1,14 @@
-import React from 'react';
 import Image from "next/image";
 import styles from './profileStatCard.module.css';
 
-const ProfileStatCard = () => {
+interface ProfileStatCardProps {
+  servicesCount: number;
+  publicationsCount: number;
+  followersCount: string;
+  blogsCount: number;
+}
+
+const ProfileStatCard = ({ servicesCount, publicationsCount, followersCount, blogsCount }: ProfileStatCardProps) => {
   return (
     <div className={styles.profileCard}>
       {/* First Column: Profile Image */}
@@ -21,14 +27,18 @@ const ProfileStatCard = () => {
 
       {/* Third Column: Stats */}
       <div className={styles.profileStats}>
-          {['Services', 'Publications', 'Followers', 'Blogs'].map((stat, index) => (
-            <div className={styles.statItem} key={index}>
-              <div className={styles.statBox}>100</div>
-              <span className={styles.statText}>{stat}</span>
+        {['Services', 'Publications', 'Followers', 'Blogs'].map((stat, index) => (
+          <div className={styles.statItem} key={index}>
+            <div className={styles.statBox}>
+              {stat === 'Services' ? servicesCount :
+               stat === 'Publications' ? publicationsCount :
+               stat === 'Followers' ? followersCount :
+               blogsCount}
             </div>
-          ))}
+            <span className={styles.statText}>{stat}</span>
+          </div>
+        ))}
       </div>
-      
     </div>
   );
 };

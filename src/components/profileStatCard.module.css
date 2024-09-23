@@ -4,9 +4,11 @@
   display: flex;
   background: var(--sidebar-color);
   border-radius: 12px;
-  padding: 2rem 2rem;
+  padding: 0 2.5rem;
   width: 100%;
-  height: 20%;
+  justify-content: space-between; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  max-height: 250px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -43,6 +45,7 @@
   grid-template-columns: 1fr 1fr;
   gap: 10px;
   height: 150px;
+  margin-left: 1.5rem;
 }
 
 /* Each stat item styling */
@@ -51,16 +54,16 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 15px;
-  background-color: #BDDBFF;
+  background-color: var(--primary-light);
   border-radius: 10px;
-  border: 1px solid #5CA5FE;
+  border: 1px solid var(--primary-color);
   padding: 1rem;
 }
 
 .statBox {
   width: 30px;
   height: 30px;
-  background-color: #5CA5FE;
+  background-color: var(--primary-color);
   border-radius: 5px;
   padding: 1rem;
   display: flex;
@@ -72,6 +75,14 @@
 }
 
 .statText {
-  color: #3a3a3a;
+  color: var(--text-color);
   font-size: 0.85em;
+  font-weight: 600;
+  flex: 1; /* Extend text to full width */
 }
+
+/* .divider {
+  border: 1px solid var(--text-color);
+  max-width: 2px;
+  opacity: 50%;
+} */

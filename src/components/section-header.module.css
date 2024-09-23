@@ -1,0 +1,23 @@
+/* section-header.module.tsx */
+.headerTitle {
+    color: var(--text-color);
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+.sectionButton {
+    background-color: var(--sidebar-color);
+    border: 1px solid var(--primary-color);
+    color: #5CA5FE;
+    padding: 10px 20px;
+    font-size: 0.85em;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .sectionButton:hover {
+    background-color: var(--primary-color);
+    color: #ffffff;
+  }

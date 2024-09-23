@@ -1,0 +1,60 @@
+.blogCard {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .imageContainer {
+    flex-shrink: 0;
+  }
+  
+  .blogImage {
+    object-fit: cover;
+    max-width: 250px;
+    max-height: 150px;
+    border-radius: 5px;
+  }
+  
+  .blogTextContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    max-width: 450px;
+  }
+  
+  .blogTitle {
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--text-color-2);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+  
+  .blogAuthor {
+    font-size: 0.875rem; 
+    font-weight: 500;
+    color: #4a5568;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .blogDescription {
+    margin-top: 0.5rem;
+    color: var(--text-color);
+    line-height: 1.2;
+    max-height: 4.8em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 14px;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+  }
+  
+  .readMore {
+    color: #2062f0;
+    font-weight: 600;
+  }

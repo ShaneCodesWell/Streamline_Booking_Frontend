@@ -297,7 +297,7 @@ export default function Home() {
           </div>
 
           {/* Book Showcase */}
-          <div className="flex justify-center items-center gap-4 px-4 py-10">
+          <div className="flex justify-center items-center gap-16 px-4 py-10">
             <div className="pub-card">
               <div className="imageContainer">
                 <Image src="/assets/images/bookcover.jpg" alt="Publication Image" width={450} height={720} className="pub-image" />
@@ -310,7 +310,7 @@ export default function Home() {
             </div>
             <div className="pub-card">
               <div className="imageContainer">
-                <Image src="/assets/images/bookcover.jpg" alt="Publication Image" width={450} height={720} className="pub-image" />
+                <Image src="/assets/images/bookcover2.jpg" alt="Publication Image" width={450} height={720} className="pub-image" />
               </div>
               <div className="pub-textContainer">
                 <h2 className="pub-title">Outliers: The Story of Success</h2>
@@ -336,7 +336,7 @@ export default function Home() {
             </div>
           </div>
           <div className="blog-card">
-            <Image src="/assets/images/blog-1.png" width={720} height={1024} alt="Blog 1" className="blog-image"/>
+            <Image src="/assets/images/blog-4.png" width={720} height={1024} alt="Blog 1" className="blog-image"/>
             <div className="blog-content">
               <h2 className="blog-title">The Future of Remote Work: Trends and Challenges</h2>
               <p className="blog-description">A brief summary of the blog post. This is where you provide a preview of the content to entice readers to click through and read more.</p>
@@ -344,7 +344,7 @@ export default function Home() {
             </div>
           </div>
           <div className="blog-card">
-            <Image src="/assets/images/blog-1.png" width={720} height={1024} alt="Blog 1" className="blog-image"/>
+            <Image src="/assets/images/blog-5.png" width={720} height={1024} alt="Blog 1" className="blog-image"/>
             <div className="blog-content">
               <h2 className="blog-title">Understanding Blockchain Technology: Beyond Cryptocurrencies</h2>
               <p className="blog-description">A brief summary of the blog post. This is where you provide a preview of the content to entice readers to click through and read more.</p>
@@ -352,7 +352,7 @@ export default function Home() {
             </div>
           </div>
           <div className="blog-card">
-            <Image src="/assets/images/blog-1.png" width={720} height={1024} alt="Blog 1" className="blog-image"/>
+            <Image src="/assets/images/blog-6.png" width={720} height={1024} alt="Blog 1" className="blog-image"/>
             <div className="blog-content">
               <h2 className="blog-title">The Rise of Sustainable Fashion: Eco-Friendly Trends in the Industry</h2>
               <p className="blog-description">A brief summary of the blog post. This is where you provide a preview of the content to entice readers to click through and read more.</p>

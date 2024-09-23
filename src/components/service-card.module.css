@@ -1,0 +1,37 @@
+.serviceCard {
+    height: fit-content;
+    padding: 20px;
+    background-color: var(--sidebar-color);
+    border: 1px solid var(--box-outline-color);
+    border-radius: 15px;
+    cursor: pointer;
+    float: left;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 400px;
+  }
+
+  .serviceCard p {
+    color: var(--text-color);
+  }
+  
+  .serviceCard:hover {
+    transform: translateY(-4px); 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
+  }
+
+  /* Star Icons */
+  .checked {
+    color: var(--primary-color);
+  }
+
+  .unchecked {
+    color: var(--primary-color-light)
+  }
+  
+  .custom-size {
+    font-size: 16px;
+  }

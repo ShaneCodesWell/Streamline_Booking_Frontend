@@ -34,7 +34,7 @@ export default function LoggedInLayout({
           {/* Adjust content padding based on sidebar state */}
           <div style={{ 
             flex: 1, 
-            padding: '1rem', 
+            padding: '1rem 2rem', 
             transition: 'margin-left 0.3s ease', 
             marginLeft: isSidebarClosed ? '88px' : '250px' 
           }}>

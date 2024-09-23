@@ -12,9 +12,14 @@
   --body-color: #F6F5FF;
   --sidebar-color: #FFF;
   --primary-color: #5CA5FE;
+  --primary-light: #BDDBFF;
+  --box-outline-color: #ccc;
   --primary-color-light: #F6F5FF;
+  --pub-box-color: #F6F5FF;
+  --pub-outline-color: #ccc;
   --toggle-color: #DDD;
   --text-color: #707070;
+  --text-color-2: #4A4A4A;
   /* ====== Transition ====== */
   --tran-03: all 0.2s ease;
   --tran-04: all 0.3s ease;
@@ -28,7 +33,7 @@ body{
 }
 
 ::selection{
-  background-color: var(--primary-color);
+  background-color: var(--sidebar-color);
   color: #fff;
 }
 
@@ -36,9 +41,14 @@ body.dark{
   --body-color: #18191a;
   --sidebar-color: #242526;
   --primary-color: #3a3b3c;
+  --primary-light: rgb(225, 225, 225, 0.2);
+  --box-outline-color: #3a3b3c;
   --primary-color-light: #3a3b3c;
+  --pub-box-color: #242526;
+  --pub-outline-color: #3a3b3c;
   --toggle-color: #fff;
   --text-color: #ccc;
+  --text-color-2: #ccc;
 }
 
 .text-text-color {
