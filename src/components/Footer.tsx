@@ -80,23 +80,18 @@ export default function Footer() {
         <div id="particles-js" className={styles.particlesBackground}></div> {/* Particle.js container */}
   
         <div className={styles.footerContent}> {/* Content container */}
-          {/* <div className={styles.visit}>
-            <a href="https://www.j-w-v.com/" target="_blank" rel="noopener noreferrer">
-              Visit the live version here!
-            </a>
-          </div> */}
-  
           <div className={styles.container}>
             <div className={styles.logo}>
-              <Image src="/assets/images/logo-icon.png" alt="logo" width={100} height={100} />
+              <Image src="/assets/images/logo-icon.png" alt="logo" width={70} height={70} />
             </div>
             <div className={styles.divider}></div>
             <div className={styles.row}>
+                <p>Careers</p>
+                <p>Contact Us</p>
                 <p>Privacy Policy</p>
-                <p>Terms & Conditions</p>
+                <p>Terms of Service</p>
             </div>
             <div>
-              
             </div>
             <div className={styles.footerBottom}>
               <p>Copyright © 2024. All rights reserved.</p>
