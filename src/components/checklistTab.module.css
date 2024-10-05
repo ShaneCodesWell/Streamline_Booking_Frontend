@@ -1,0 +1,85 @@
+.card {
+    width: 250px;
+    height: 150px;
+    background-color: var(--sidebar-color);
+    border-radius: 15px;
+    display: flex;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  .colorStrip {
+    width: 20px;
+    border-radius: 20px 0 0 20px;
+  }
+  
+  .content {
+    padding: 20px 30px 10px 20px ;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+  
+  .header {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--text-color);
+    margin: 0;
+    line-height: 1.2;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+  }
+  
+  .subtext {
+    font-size: 14px;
+    color: var(--text-color-2);
+    margin-top: 5px;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+  }
+  
+  .options {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: var(--text-color-2);
+  }
+  
+  .optionsButton {
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  .dropdown {
+    position: absolute;
+    top: 25px;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 7px;
+    list-style: none;
+    padding: 5px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  }
+  
+  .dropdown li {
+    padding: 5px 15px;
+    cursor: pointer;
+  }
+  
+  .dropdown li:hover {
+    background-color: #f0f0f0;
+  }
+  

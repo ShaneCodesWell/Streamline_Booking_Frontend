@@ -1,0 +1,44 @@
+.container {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    gap: 10px;
+  }
+  
+  .nextButton {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .cardWrapper {
+    position: relative;
+    width: 100%;
+    max-width: 400px; /* Adjust this based on your design */
+    margin: 0 auto;
+  }
+  
+  .cardActive {
+    position: absolute;
+    width: 100%;
+    transition: transform 0.5s ease, z-index 0s;
+    z-index: 2;
+    transform: scale(1);
+  }
+  
+  .cardInactive {
+    position: absolute;
+    width: 100%;
+    transition: transform 0.5s ease, z-index 0s;
+    z-index: 1;
+    transform: scale(0.9);
+    top: 30px; /* Adjust this to change how much of the inactive cards are visible */
+    left: 0; /* Center the inactive cards */
+  }
+  

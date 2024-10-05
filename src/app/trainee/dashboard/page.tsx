@@ -1,37 +1,42 @@
 // src/app/trainee/dashboard/page.tsx
+'use client';
 import LayoutLoggedIn from '../../../layouts/LoggedInLayout';
-import ProfileStatCard from '../../../components/profileStatCard';
+import UpcomingSessions from '../../../components/upcomingSessions';
 import Calendar from '../../../components/calendar';
 import SectionHeader from '../../../components/section-header';
-import ServiceCard from '@/components/service-card';
 import Publication from '../../../components/publication-tab';
 import BlogArticle from '../../../components/single-Blog';
+import ChecklistTab from '@/components/checklistTab';
 
 export default function TraineeDashboard() {
+
+  const sessions = [
+    { headerText: 'Session 1', subText: 'Details 1', date: '8th Nov', time: '9:00 AM - 10:00 AM' },
+    { headerText: 'Session 2', subText: 'Details 2', date: '9th Nov', time: '11:00 AM - 12:00 PM' },
+    { headerText: 'Session 3', subText: 'Details 3', date: '10th Nov', time: '2:00 PM - 3:00 PM' },
+  ];
+
   return (
     <LayoutLoggedIn>
       <div className='mx-auto max-w-7xl sm:px-4 lg:px-2'>
-        <div className="flex flex-row gap-4">
-        <ProfileStatCard
-          servicesCount={200}
-          publicationsCount={50}
-          followersCount={'1K'}
-          blogsCount={30}
-        />
-          <Calendar />
+        <div className="flex justify-between">
+          {/* Stacked Cards */}
+          <div className='w-2/3'>
+            <UpcomingSessions sessions={sessions} />
+          </div>
+          <div className='w-1/3'>
+            <Calendar />
+          </div>
         </div>
+        {/* Research Checklist */}
         <div className='mt-6'>
-          <SectionHeader title="Services" buttonText="Add Service" />
+          <SectionHeader title="Research Checklist" buttonText="Add Service" />
           <div className="flex justify-center items-center flex-col gap-4 mt-2">
-            <div className="flex flex-grid gap-4">
-              <ServiceCard />
-              <ServiceCard />
-              <ServiceCard />
-            </div>
-            <div className="flex flex-grid gap-4">
-              <ServiceCard />
-              <ServiceCard />
-              <ServiceCard />
+            <div className="flex flex-wrap justify-between gap-8 max-w-6xl">
+              <ChecklistTab headerText='Writing accurate research figures' subText='Learn how to create clear, concise, and visually appealing research figures that effectively communicate your findings.' color='#3498db' />
+              <ChecklistTab headerText='How to write a conference paper' subText='Master the art of writing a compelling conference paper that highlights your research, adheres to conference guidelines, and makes a lasting impression on the audience.' color='#8C6AB9' />
+              <ChecklistTab headerText='Writing accurate research references' subText='Understand the importance of proper citation and referencing in academic research. Learn how to accurately cite sources using different citation styles (e.g., APA, MLA, Chicago).' color='#4CB94A' />
+              <ChecklistTab headerText='How to write accurate research figures' subText='Learn how to create clear, concise, and visually appealing research figures that effectively communicate your findings.' color='#FB4337' />
             </div>
           </div>
         </div>
@@ -40,7 +45,7 @@ export default function TraineeDashboard() {
       {/* Publications */}
       <div className='mx-auto max-w-7xl sm:px-4 lg:px-2'>
         <div className='mt-6'>
-          <SectionHeader title="Research Checklist" buttonText="Learn More" />
+          <SectionHeader title="Books you might be interested In" buttonText="Learn More" />
         </div>
         <div className='flex justify-center items-center gap-16 mt-10'>
           <Publication title="Outliers: The Story of Success" author="Malcolm Gladwell" description="In this thought-provoking book, Malcolm Gladwell explores the factors that contribute to extraordinary success. From cultural background to timing, Gladwell uncovers hidden patterns that shape outliers—individuals who defy norms and achieve greatness." imageUrl="/assets/images/bookcover.jpg" />
