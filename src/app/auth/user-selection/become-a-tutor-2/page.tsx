@@ -17,7 +17,7 @@ export default function BecomeATutorStep2 () {
                     <h1 className="text-3xl font-semibold text-gray-700">Become a <span className="text-blue-500">Research Tutor</span></h1>
                     <p className="text-gray-700">Fill out the form completely in order to become a researcher on our platform.</p>
                 </div>
-                <div className="card p-10 bg-white rounded-lg shadow-md border border-gray-200">
+                <div className="card p-10 bg-white rounded-2xl shadow-md border border-gray-200">
                     {/* Field 1 */}
                     <div className="pb-4">
                         <h2 className="text-lg font-medium text-gray-700 pb-2">

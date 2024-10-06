@@ -11,26 +11,21 @@ import ChecklistTab from '@/components/checklistTab';
 export default function TraineeDashboard() {
 
   const sessions = [
-    { headerText: 'Session 1', subText: 'Details 1', date: '8th Nov', time: '9:00 AM - 10:00 AM' },
-    { headerText: 'Session 2', subText: 'Details 2', date: '9th Nov', time: '11:00 AM - 12:00 PM' },
-    { headerText: 'Session 3', subText: 'Details 3', date: '10th Nov', time: '2:00 PM - 3:00 PM' },
+    { headerText: 'How to write a convincing research Introduction', subText: 'Dr. Amos Oppong', date: '8th Nov, 2024', time: '9:00 AM - 10:00 AM' },
+    { headerText: 'How to write a convincing research Introduction', subText: 'Dr. Amos Oppong', date: '9th Nov 2024', time: '11:00 AM - 12:00 PM' },
   ];
 
   return (
     <LayoutLoggedIn>
       <div className='mx-auto max-w-7xl sm:px-4 lg:px-2'>
-        <div className="flex justify-between">
+        <div className="flex justify-between gap-4">
           {/* Stacked Cards */}
-          <div className='w-2/3'>
             <UpcomingSessions sessions={sessions} />
-          </div>
-          <div className='w-1/3'>
             <Calendar />
-          </div>
         </div>
         {/* Research Checklist */}
         <div className='mt-6'>
-          <SectionHeader title="Research Checklist" buttonText="Add Service" />
+          <SectionHeader title="Research Checklist" buttonText="View Checklist" />
           <div className="flex justify-center items-center flex-col gap-4 mt-2">
             <div className="flex flex-wrap justify-between gap-8 max-w-6xl">
               <ChecklistTab headerText='Writing accurate research figures' subText='Learn how to create clear, concise, and visually appealing research figures that effectively communicate your findings.' color='#3498db' />

@@ -17,6 +17,9 @@
     display: flex;
     align-items: center;
     background: #f0f0f0;
+    opacity: 0; /* Start invisible */
+    cursor: pointer; /* Makes the card clickable */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
   }
   
   /* Match this class to JSX code */
@@ -51,7 +54,6 @@
     font-size: 1rem;
   }
   
-  /* These control alignment for text within the card */
   .right {
     margin-left: auto;
     padding: 0 2rem;
@@ -62,12 +64,57 @@
     padding: 0 2rem;
   }
   
-  /* Add these styles for shifting the top and bottom cards */
-  .topCard {
-    transform: translateX(-5rem); /* Moves the top card slightly to the left */
+  /* Hover effect to make card look clickable */
+  .card:hover {
+    transform: scale(2.03); /* Slightly enlarges the card */
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
   }
   
+  /* Animation for top card - slide in from left */
+  .topCard {
+    transform: translateX(-8rem); /* Initial position */
+    animation: slideInFromLeft 1s ease-out forwards, fadeIn 1s ease-in forwards;
+    animation-delay: 0.3s; /* Delay for staggered animation */
+  }
+  
+  /* Animation for bottom card - slide in from right */
   .bottomCard {
-    transform: translateX(5rem); /* Moves the bottom card slightly to the right */
+    transform: translateX(8rem); /* Initial position */
+    animation: slideInFromRight 1s ease-out forwards, fadeIn 1s ease-in forwards;
+    animation-delay: 0.5s; /* Delay for staggered animation */
+  }
+
+  .clicked {
+    filter: brightness(0.8); /* Applies brightness filter when clicked */
+  }  
+  
+  /* Keyframes for sliding in from the left */
+  @keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-10rem);
+    }
+    100% {
+      transform: translateX(-4rem); /* Ends at original position */
+    }
+  }
+  
+  /* Keyframes for sliding in from the right */
+  @keyframes slideInFromRight {
+    0% {
+      transform: translateX(10rem);
+    }
+    100% {
+      transform: translateX(4rem); /* Ends at original position */
+    }
+  }
+  
+  /* Keyframes for fading in */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
   

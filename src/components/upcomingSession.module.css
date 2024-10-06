@@ -1,94 +1,78 @@
 /* upcomingSession.module.css */
+.cardWrapper {
+  position: relative;
+  margin-bottom: 16px;
+}
+
 .card {
-    position: relative;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 16px;
-    margin-top: -100px; /* Add negative margin to create overlap */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 100%;
-  }
-  
-  .card.active {
-    transform: scale(1.05); /* Slightly enlarge the active card */
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
-  }
-  
-  .content {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .divider {
-    width: 1px;
-    background-color: #e0e0e0;
-    margin-left: 16px;
-    margin-right: 16px;
-  }
-  
-  .sessionInfo {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .viewButton {
-    background-color: #3b82f6; /* Tailwind blue */
-    color: white;
-    padding: 8px 16px;
-    border-radius: 8px;
-  }
-  
-  .card:hover {
-    transform: translateY(-5px);
-  }
-  
-  
-  .date {
-    font-size: 16px;
-    font-weight: bold;
-    color: var(--text-color-2);
-    margin: 0;
-  }
-  
-  .time {
-    font-size: 14px;
-    color: var(--text-color);
-    margin: 5px 0 0 0;
-  }
-  
-  .options {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    color: var(--text-color-2);
-  }
-  
-  .optionsButton {
-    background: none;
-    border: none;
-    font-size: 18px;
-    cursor: pointer;
-  }
-  
-  .dropdown {
-    position: absolute;
-    top: 25px;
-    right: 0;
-    background-color: white;
-    border: 1px solid #ddd;
-    border-radius: 7px;
-    list-style: none;
-    padding: 5px 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
-  }
-  
-  .dropdown li {
-    padding: 5px 15px;
-    cursor: pointer;
-  }
-  
-  .dropdown li:hover {
-    background-color: #f0f0f0;
-  }
-  
+  background-color: var(--sidebar-color);
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 0 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.5s ease, opacity 0.5s ease; /* Adjusted for smoother transitions */
+  position: absolute; /* Changed to absolute for stacking */
+  left: 0;
+  right: 0;
+  height: 180px;
+}
+
+.cardActive {
+  z-index: 2;
+  opacity: 1;
+  transform: translateY(0); /* No vertical movement */
+}
+
+.cardInactive {
+  z-index: 1;
+  opacity: 0.8; /* Slightly transparent */
+  transform: translateY(30px) scale(0.9); /* Moved downwards */
+}
+
+.content {
+  display: flex;
+  width: 100%;
+}
+
+.main {
+  flex: 7;
+}
+
+.header {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: var(--text-color);
+}
+
+.subtext {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin-bottom: 16px;
+}
+
+.sessionInfo {
+  flex: 3; /* Takes 3/10 of the space */
+  text-align: right;
+}
+
+.date {
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+.time {
+  font-size: 0.9rem;
+  color: var(--text-color);
+}
+
+.divider {
+  width: 1px;
+  background-color: #d1d5db;
+  margin: 0 16px;
+  height: 100px;
+  align-self: center;
+}

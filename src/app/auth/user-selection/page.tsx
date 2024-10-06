@@ -4,12 +4,24 @@ import styles from "./userSelection.module.css";
 import Image from "next/image";
 import LoggedOutLayout from '../../../layouts/LoggedOutLayout';
 import { useRouter } from 'next/navigation';
+import { useState } from 'react'; // Import useState
 
 export default function UserSelection() {
   const router = useRouter();
+  const [clickedCard, setClickedCard] = useState<string | null>(null); // State to manage clicked card
 
-  const handleNextStep = () => {
-    router.push('/auth/user-selection/become-a-tutor-2');
+  const handleNextStepTutor = () => {
+    setClickedCard('tutor'); // Set clicked card state
+    setTimeout(() => {
+      router.push('/auth/user-selection/become-a-tutor'); // Navigate to tutor route
+    }, 300); // Delay to allow the animation to complete
+  };
+
+  const handleNextStepTrainee = () => {
+    setClickedCard('trainee'); // Set clicked card state
+    setTimeout(() => {
+      router.push('/trainee/dashboard'); // Navigate to trainee route
+    }, 300); // Delay to allow the animation to complete
   };
 
   return (
@@ -25,7 +37,10 @@ export default function UserSelection() {
         </div>
         <div className={styles.cardContainer}>
           {/* First Card */}
-          <div className={`${styles.card} ${styles.topCard}`}>
+          <div
+            className={`${styles.card} ${styles.topCard} ${clickedCard === 'tutor' ? styles.clicked : ''}`} // Add clicked class if card is clicked
+            onClick={handleNextStepTutor} // Call tutor route
+          >
             <Image
               className={styles.cardImage}
               src="/assets/images/Select-Tutor.png"
@@ -42,7 +57,10 @@ export default function UserSelection() {
           </div>
 
           {/* Second Card */}
-          <div className={`${styles.card} ${styles.bottomCard}`}>
+          <div
+            className={`${styles.card} ${styles.bottomCard} ${clickedCard === 'trainee' ? styles.clicked : ''}`} // Add clicked class if card is clicked
+            onClick={handleNextStepTrainee} // Call trainee route
+          >
             <Image
               className={styles.cardImage}
               src="/assets/images/Select-Trainee.png"
