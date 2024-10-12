@@ -21,7 +21,7 @@ export default function Header({
           <Link href="/"><Image src="/assets/images/Logo.svg" alt="brand-logo" width={60} height={60} /></Link>
         </div>
         <ul className="nav-links">
-          <li><Link href="#" className="nav-item">Find Tutors</Link></li>
+          <li><Link href="/find-tutors" className="nav-item">Find Tutors</Link></li>
           <li><Link href="/auth/user-selection/become-a-tutor" className="nav-item">Become a Tutor</Link></li>
           <li><Link href="/contacts" className="nav-item">Contact Us</Link></li>
           <li><Link href="/about" className="nav-item">About Us</Link></li>

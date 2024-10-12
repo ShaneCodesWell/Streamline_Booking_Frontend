@@ -18,6 +18,7 @@ export default function TraineeDashboard() {
   return (
     <LayoutLoggedIn>
       <div className='mx-auto max-w-7xl sm:px-4 lg:px-2'>
+      <p className='text-[1.2em] font-medium mb-2' style={{ color: 'var(--text-color)' }}>Upcoming Sessions</p>
         <div className="flex justify-between gap-4">
           {/* Stacked Cards */}
             <UpcomingSessions sessions={sessions} />

@@ -43,13 +43,13 @@ export default function Sidebar({ onToggle }: { onToggle: (isClosed: boolean) =>
         <div className="menu">
           <ul className="menu-links">
             <li className="nav-link">
-              <Link href="#">
+              <Link href="/tutor/dashboard">
                 <i className='bx bx-home-alt icon'></i>
                 <span className="text nav-text">Dashboard</span>
               </Link>
             </li>
             <li className="nav-link">
-              <Link href="#">
+              <Link href="/tutor/sessions">
                 <i className='bx bx-calendar icon'></i>
                 <span className="text nav-text">Booked Sessions</span>
               </Link>
@@ -61,7 +61,7 @@ export default function Sidebar({ onToggle }: { onToggle: (isClosed: boolean) =>
               </Link>
             </li>
             <li className="nav-link">
-              <Link href="#">
+              <Link href="/tutor/blogs">
                 <i className='bx bx-heart icon'></i>
                 <span className="text nav-text">Saved Blogs</span>
               </Link>

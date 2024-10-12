@@ -12,7 +12,7 @@ export default function BecomeATutor () {
 
     return (
         <LayoutLoggedIn>
-            <main className="px-20 py-10">
+            <main className="px-20 pb-10 pt-4">
                 <div className="pb-6 text-center">
                     <h1 className="text-3xl font-semibold text-gray-700">Become a <span className="text-blue-500">Research Tutor</span></h1>
                     <p className="text-gray-700">Fill out the form completely in order to become a researcher on our platform.</p>

@@ -26,7 +26,7 @@ export default function UserSelection() {
 
   return (
     <LoggedOutLayout>
-      <main className="px-20 py-10">
+      <main className="px-20 pb-10 pt-4">
         <div className="pb-6 text-center">
           <h1 className="text-3xl font-semibold text-gray-700">
             Welcome to our <span className="text-blue-500">Research Hub</span>!

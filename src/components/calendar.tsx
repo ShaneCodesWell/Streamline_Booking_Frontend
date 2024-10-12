@@ -58,7 +58,7 @@ const Calendar = () => {
           return (
             <div key={day} className={styles.dayOfMonth}>
               {dayIndex >= 0 ? (
-                <span className={isCurrentDay ? styles.currentDay : ''}>{day}</span>
+                <span className={`${isCurrentDay ? styles.currentDay : ''}`}>{day}</span>
               ) : (
                 <span>&nbsp;</span>
               )}

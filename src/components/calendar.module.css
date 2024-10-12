@@ -1,46 +1,55 @@
+/* calendar.module.css */
 .calendar {
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    background: var(--sidebar-color);
-    border-radius: 12px;
-    max-height: 250px;
-    width: 400px;
-  }
-  
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-bottom: 1rem;
-    color: var(--text-color);
-  }
-  
-  .daysOfWeek {
-    display: grid;
-    gap: 6px;
-    grid-template-columns: repeat(7, 1fr);
-    font-size: 0.7rem;
-  }
-  
-  .dayOfWeek {
-    text-align: center;
-    color: #d4d4d4;
-  }
-  
-  .daysOfMonth {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    grid-template-rows: repeat(5, auto);
-    gap: 6px;
-    grid-template-rows: repeat(4, auto);
-  }
-  
-  .dayOfMonth {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-    font-size: 0.7rem;
-    padding: 5px;
-    color: var(--text-color);
-  }
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  background: var(--sidebar-color);
+  border-radius: 12px;
+  max-height: 250px;
+  width: 400px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1rem;
+  color: var(--text-color);
+}
+
+.daysOfWeek {
+  display: grid;
+  gap: 6px;
+  grid-template-columns: repeat(7, 1fr);
+  font-size: 0.7rem;
+}
+
+.dayOfWeek {
+  text-align: center;
+  color: #d4d4d4;
+}
+
+.daysOfMonth {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(5, auto);
+  gap: 6px;
+  grid-template-rows: repeat(4, auto);
+}
+
+.dayOfMonth {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  font-size: 0.7rem;
+  padding: 5px;
+  color: var(--text-color);
+}
+
+/* New style for the current day */
+.currentDay {
+  background-color: #658CFF; /* Active day background color */
+  color: white; /* Optional: Change text color to white for better contrast */
+  border-radius: 50%; /* Optional: Make it circular */
+  padding: 5px; /* Optional: Add padding */
+}
