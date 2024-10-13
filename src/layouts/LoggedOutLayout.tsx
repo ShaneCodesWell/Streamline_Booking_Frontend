@@ -49,7 +49,7 @@ export default function LoggedOutLayout({
   return (
     <>
       {/* Header */}
-      <Header openLoginPopup={openLoginPopup} openSignupPopup={openSignupPopup} /> 
+      <Header /> 
       
       <main>
         {children}
@@ -61,10 +61,6 @@ export default function LoggedOutLayout({
       ) : (
         <Footer />
       )}
-
-      {/* Popups */}
-      <LoginPopup isOpen={isLoginPopupOpen} onClose={closeLoginPopup} />
-      <SignupPopup isOpen={isSignupPopupOpen} onClose={closeSignupPopup} />
     </>
   );
 }

@@ -1,4 +1,5 @@
 // src/app/tutor/dashboard/page.tsx
+"use client";
 import LayoutLoggedIn from '../../../layouts/LoggedInLayout';
 import ProfileStatCard from '../../../components/profileStatCard';
 import Calendar from '../../../components/calendar';

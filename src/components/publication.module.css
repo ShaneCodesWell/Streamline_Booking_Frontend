@@ -2,7 +2,7 @@
 .pubCard {
     position: relative;
     display: flex; /* Flexbox for horizontal alignment */
-    background-color: var(--pub-box-color);
+    background-color: var(--sidebar-color);
     border: 1px solid var(--pub-outline-color);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 0.5rem;

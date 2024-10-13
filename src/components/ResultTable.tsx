@@ -18,12 +18,7 @@ const ResultTable: React.FC<ResultTableProps> = ({ results }) => {
   return (
     <div className="overflow-x-auto rounded-lg border border-gray-200" style={{ border: '1px solid var(--pub-outline-color)', backgroundColor: 'var(--body-color)' }}>
       <table
-        className="min-w-full border-collapse rounded-lg"
-        style={{
-          border: 'none',
-          backgroundColor: 'var(--body-color)',
-        }}
-      >
+        className="min-w-full border-collapse rounded-lg" style={{ border: 'none', backgroundColor: 'var(--body-color)', }}>
         <thead>
           <tr className="text-left" style={{ backgroundColor: 'var(--body-color)' }}>
             <th className="px-4 py-2 text-left text-[0.85em] font-medium" style={{ color: 'var(--text-color)' }}></th>
@@ -35,11 +30,7 @@ const ResultTable: React.FC<ResultTableProps> = ({ results }) => {
         </thead>
         <tbody>
           {results.map((result) => (
-            <tr
-              key={result.id}
-              className="border-t"
-              style={{ border: '1px solid var(--pub-outline-color)' }}
-            >
+            <tr key={result.id} className="border-t" style={{ border: '1px solid var(--pub-outline-color)' }} >
               <td className="px-4 py-2">
                 <Image
                   src={result.imageUrl}

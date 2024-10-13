@@ -1,19 +1,14 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from 'react';
+import Login from '../components/LoginPopup';
+import Signup from '../components/SignupPopup';
 import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 
 config.autoAddCss = false;
 
-export default function Header({
-  openLoginPopup,
-  openSignupPopup,
-}: {
-  openLoginPopup: () => void;
-  openSignupPopup: () => void;
-}) {
+export default function Header() {
   return (
     <header className="header">
       <nav style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '0.2rem 2rem' }}>
@@ -27,8 +22,8 @@ export default function Header({
           <li><Link href="/about" className="nav-item">About Us</Link></li>
         </ul>
         <div style={{ flex: 1, display: 'flex', justifyContent: 'flex-end', gap: '1rem' }}>
-          <button onClick={openLoginPopup} className="bg-blue-500 text-white py-1 px-4 rounded">Log In</button>
-          <button onClick={openSignupPopup} className="bg-blue-500 text-white py-1 px-4 rounded">Sign Up</button>
+          <Login />
+          <Signup />
         </div>
       </nav>
     </header>

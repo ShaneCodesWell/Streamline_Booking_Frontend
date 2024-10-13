@@ -1,73 +1,37 @@
-"use client";
-import React, { useState } from 'react';
-import styles from './calendar.module.css';
+import * as React from 'react';
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
+import { DateCalendar } from '@mui/x-date-pickers/DateCalendar';
+import { Box } from '@mui/material';
+import dayjs from 'dayjs';
 
-const Calendar = () => {
-  const [month, setMonth] = useState(11); // November
-  const [year, setYear] = useState(2024);
-
-  const daysOfWeek = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-
-  const daysInMonth = (month: number, year: number): number => {
-    return new Date(year, month + 1, 0).getDate();
-  };
-
-  const prevMonth = () => {
-    if (month === 0) {
-      setYear(year - 1);
-      setMonth(11);
-    } else {
-      setMonth(month - 1);
-    }
-  };
-
-  const nextMonth = () => {
-    if (month === 11) {
-      setYear(year + 1);
-      setMonth(0);
-    } else {
-      setMonth(month + 1);
-    }
-  };
-
-  const getStartingDay = (year: number, month: number): number => {
-    const firstDayOfMonth = new Date(year, month, 1);
-    return firstDayOfMonth.getDay(); // 0 is Sunday
-  };
-
+export default function CustomStyledCalendar() {
   return (
-    <div className={styles.calendar}>
-      <div className={styles.header}>
-        <button onClick={prevMonth}>&#10096;</button>
-        <span>{new Date(year, month, 1).toLocaleString('en-US', { month: 'long', year: 'numeric' })}</span>
-        <button onClick={nextMonth}>&#10097;</button>
-      </div>
-      <div className={styles.daysOfWeek}>
-        {daysOfWeek.map((day) => (
-          <div key={day} className={styles.dayOfWeek}>
-            {day}
-          </div>
-        ))}
-      </div>
-      <div className={styles.daysOfMonth}>
-        {Array.from({ length: daysInMonth(month, year) }, (_, i) => i + 1).map((day) => {
-          const startingDay = getStartingDay(year, month);
-          const dayIndex = day + startingDay - 1; // Adjust for starting day
-          const isCurrentDay = new Date().getDate() === day && new Date().getMonth() === month && new Date().getFullYear() === year;
-
-          return (
-            <div key={day} className={styles.dayOfMonth}>
-              {dayIndex >= 0 ? (
-                <span className={`${isCurrentDay ? styles.currentDay : ''}`}>{day}</span>
-              ) : (
-                <span>&nbsp;</span>
-              )}
-            </div>
-          );
-        })}
-      </div>
-    </div>
+    <LocalizationProvider dateAdapter={AdapterDayjs}>
+      <Box
+        sx={{
+          // This targets the calendar container
+          '& .MuiDayPicker-root': {
+            boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.1)',
+            padding: '20px',
+            background: 'var(--sidebar-color)',
+            borderRadius: '12px',
+            maxHeight: '250px',
+            width: '400px',
+          },
+          // This targets the selected day button
+          '& .Mui-selected': {
+            backgroundColor: '#658CFF',
+            color: 'white',
+          },
+          // This targets the today button
+          '& .MuiPickersDay-today': {
+            border: '1px solid #658CFF',
+          },
+        }}
+      >
+        <DateCalendar />
+      </Box>
+    </LocalizationProvider>
   );
-};
-
-export default Calendar;
+}
