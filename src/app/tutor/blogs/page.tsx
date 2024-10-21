@@ -8,25 +8,25 @@ const blogsData = [
         imageUrl: '/assets/images/blog-1.png',
         title: 'Exploring the Impact of Artificial Intelligence on Healthcare',
         description: 'A brief summary of the blog post. This is where you provide a preview of the content to entice readers to click through and read more.',
-        link: '#',
+        link: '/tutor/blogs/blog-page',
     },
     {
         imageUrl: '/assets/images/blog-4.png',
         title: 'The Role of Big Data in Modern Research',
         description: 'A summary discussing how big data is shaping modern scientific research.',
-        link: '#',
+        link: '/tutor/blogs/blog-page',
     },
     {
         imageUrl: '/assets/images/blog-3.png',
         title: 'Innovations in Renewable Energy',
         description: 'An overview of the latest innovations in renewable energy and their potential impact.',
-        link: '#',
+        link: '/tutor/blogs/blog-page',
     },
     {
       imageUrl: '/assets/images/blog-2.png',
       title: 'Innovations in Renewable Energy',
       description: 'An overview of the latest innovations in renewable energy and their potential impact.',
-      link: '#',
+      link: '/tutor/blogs/blog-page',
   },
 ];
 

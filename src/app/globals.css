@@ -12,6 +12,7 @@
   --body-color: #F6F5FF;
   --sidebar-color: #FFF;
   --primary-color: #5CA5FE;
+  --primary-color-2: #5CA5FE;
   --primary-light: #BDDBFF;
   --box-outline-color: #ccc;
   --primary-color-light: #F6F5FF;
@@ -41,6 +42,7 @@ body.dark{
   --body-color: #18191a;
   --sidebar-color: #242526;
   --primary-color: #3a3b3c;
+  --primary-color-2: #ccc;
   --primary-light: rgb(225, 225, 225, 0.2);
   --box-outline-color: #3a3b3c;
   --primary-color-light: #3a3b3c;

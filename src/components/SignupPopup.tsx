@@ -1,5 +1,6 @@
 // components/SignupPopup.tsx
 import React, { useState } from 'react';
+import Link from 'next/link';
 import { Dialog, DialogActions, DialogContent, DialogTitle, Button, TextField, useTheme, Box } from '@mui/material';
 import Image from 'next/image'; // Assuming you're using Next.js
 
@@ -82,7 +83,7 @@ function Signup() {
                 />
                 <TextField
                     margin="dense"
-                    id="password"
+                    id="confirm-password"
                     label="Confirm Password"
                     type="password"
                     fullWidth
@@ -111,7 +112,7 @@ function Signup() {
                   },
                 }}
               >
-                Sign Up
+                <Link href="/auth/user-selection/">Sign Up</Link>
               </Button>
             </Box>
           </DialogContent>

@@ -1,25 +1,27 @@
-import React from 'react';
+"use client";
+
+import React, { useState } from 'react';
+import Link from 'next/link'; // Import Link
 import styles from './session.module.css';
 
 const BookedCard = () => {
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
   return (
     <div className={styles.card}>
-      {/* First Section: Day and Date */}
+      {/* Main content */}
       <div className={styles.dayDate}>
         <div>Mon</div>
         <div>06</div>
       </div>
 
-      {/* Divider */}
       <div className={styles.divider} />
 
-      {/* Second Section: Time */}
       <div className={styles.time}>
         <div>9:00 AM</div>
         <div>10:00 AM</div>
       </div>
 
-      {/* Third Section: Title and Status */}
       <div className={styles.details}>
         <div className={styles.title}>
           How to write a convincing research Introduction
@@ -29,14 +31,30 @@ const BookedCard = () => {
         </div>
       </div>
 
-      {/* Fourth Section: Instructor */}
       <div className={styles.instructor}>
         <div>Dr. Amos Oppong</div>
       </div>
 
-      {/* Fifth Section: Dropdown button */}
+      {/* Action Dropdown */}
       <div className={styles.actions}>
-        <button className={styles.editButton}>Edit</button>
+        <button
+          className={styles.editButton}
+          onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+        >
+          Actions
+        </button>
+
+        {isDropdownOpen && (
+          <ul className={styles.dropdown}>
+            <li>
+              {/* Use Next.js Link for client-side navigation */}
+              <Link href="/tutor/sessions/sessionid">
+                View
+              </Link>
+            </li>
+            <li>Edit</li>
+          </ul>
+        )}
       </div>
     </div>
   );
