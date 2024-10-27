@@ -198,7 +198,7 @@ export default function Home() {
               <p className="article-body">
                 Renewable energy, as an environmentally friendly and sustainable source of energy, is key to realizing the nationally determined contributions of the United States (US) to the December 2015 Paris agreement. Policymakers in the US rely on energy forecasts to draft and...
               </p>
-              <Link href="#" className="read-more">Read More</Link>
+              <Link href="/tutor/blogs/blog-page" className="read-more">Read More</Link>
             </div>
 
             <div className="article-card">
@@ -206,7 +206,7 @@ export default function Home() {
               <p className="article-body">
                 Renewable energy, as an environmentally friendly and sustainable source of energy, is key to realizing the nationally determined contributions of the United States (US) to the December 2015 Paris agreement. Policymakers in the US rely on energy forecasts to draft and...
               </p>
-              <Link href="#" className="read-more">Read More</Link>
+              <Link href="/tutor/blogs/blog-page" className="read-more">Read More</Link>
             </div>
 
             <div className="article-card">
@@ -214,7 +214,7 @@ export default function Home() {
               <p className="article-body">
                 Renewable energy, as an environmentally friendly and sustainable source of energy, is key to realizing the nationally determined contributions of the United States (US) to the December 2015 Paris agreement. Policymakers in the US rely on energy forecasts to draft and...
               </p>
-              <Link href="#" className="read-more">Read More</Link>
+              <Link href="/tutor/blogs/blog-page" className="read-more">Read More</Link>
             </div>
           </div>
           </div>

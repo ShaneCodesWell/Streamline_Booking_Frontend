@@ -7,6 +7,7 @@ import SectionHeader from '../../../components/section-header';
 import ServiceCard from '@/components/service-card';
 import Publication from '../../../components/publication-tab';
 import BlogArticle from '../../../components/single-Blog';
+import Link from 'next/link';
 
 export default function TutorDashboard() {
   return (
@@ -22,7 +23,18 @@ export default function TutorDashboard() {
           <Calendar />
         </div>
         <div className='mt-6'>
-          <SectionHeader title="Services" buttonText="Add Service" />
+        <div className="flex justify-between items-center mb-4">
+          <div>
+              <p className="text-[1.2em] font-medium" style={{ color: 'var(--text-color)' }}>
+                  Services
+              </p>
+          </div>
+          <Link href="/tutor/services/add-service">
+                  <button className="bg-[var(--sidebar-color)] border border-[var(--primary-color)] text-[#5CA5FE] px-5 py-2.5 text-[0.85em] rounded-[10px] shadow-md cursor-pointer transition-colors hover:bg-[var(--primary-color)] hover:text-white">
+                  Add Service
+                  </button>
+          </Link>
+        </div>
           <div className="flex justify-center items-center flex-col gap-4 mt-2">
             <div className="flex flex-grid gap-4">
               <ServiceCard />
@@ -54,7 +66,7 @@ export default function TutorDashboard() {
         <div className='mt-6'>
           <SectionHeader title="Explore Articles" buttonText="Learn More" />
         </div>
-        <div className='flex justify-center items-center gap-6 mt-8'>
+        <div className='flex justify-center items-center gap-12 mt-8'>
           <BlogArticle title="Key Determinants of Inflation in Ghana" author="Amos Oppong" description="Inflation, and its deleterious effects on economies, has for long been the worry of governments especially among developing countries including Ghana. Several studies on the Ghanaian economy, have concluded that inflation in Ghana is purely a monetary phenomenon though in reality, the causes of inflation are numerous and vary" imageUrl="/assets/images/blog-3.png" />
           <BlogArticle title="Forecasting Renewable Energy Consumption under Zero Assumptions" author="Amos Oppong" description="Renewable energy, as an environmentally friendly and sustainable source of energy, is key to realizing the nationally determined contributions of the United States (US) to the December 2015 Paris agreement. Policymakers in the US rely on energy forecasts to draft and implement cost-minimizing, efficient and realistic renewable and sustainable energy policies but the inaccuracies in past projections are considerably high." imageUrl="/assets/images/blog-2.png" />
         </div>

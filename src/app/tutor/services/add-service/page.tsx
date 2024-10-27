@@ -17,7 +17,7 @@ export default function AddService () {
                     <h1 className="text-3xl font-semibold" style={{ color: 'var(--text-color-2)' }}>Post a <span className="text-blue-500">Service </span></h1>
                     <p className="text-base" style={{ color: 'var(--text-color-2)' }}>Follow these simple steps to share your services with our community and start connecting with potential clients:</p>
                 </div>
-                <div className="card p-14 rounded-2xl shadow-md border border-gray-200" style={{ background: 'var(--sidebar-color-2)' }}>
+                <div className="card p-14 rounded-2xl shadow-md border" style={{ background: 'var(--sidebar-color)', borderColor: 'var(--pub-outline-color)' }}>
                     {/* Field 1 */}
                     <div className="pb-4">
                         <h2 className="text-lg font-medium pb-2" style={{ color: 'var(--text-color-2)' }}>
