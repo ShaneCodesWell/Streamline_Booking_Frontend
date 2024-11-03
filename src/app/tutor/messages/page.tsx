@@ -1,4 +1,4 @@
-// src/app/trainee/messages/page.tsx
+// src/app/turor/messages/page.tsx
 import LayoutLoggedIn from '../../../layouts/LoggedInLayout';
 
 export default function Messages() {

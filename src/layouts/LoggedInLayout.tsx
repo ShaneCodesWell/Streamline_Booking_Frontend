@@ -2,7 +2,7 @@
 import "../app/globals.css";  // Import the global CSS
 import "/styles/custom.css";
 import { config } from '@fortawesome/fontawesome-svg-core';
-import '@fortawesome/fontawesome-svg-core/styles.css';
+// import '@fortawesome/fontawesome-svg-core/styles.css';
 import HeaderUser from '../components/Header-User';
 import AppFooter from '../components/App_Footer';
 import Sidebar from '../components/Sidebar'; 

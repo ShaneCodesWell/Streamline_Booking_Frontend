@@ -4,9 +4,9 @@ import "/styles/custom.css";
 import { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';  // Correct import for next/navigation
 import { config } from '@fortawesome/fontawesome-svg-core';
-import '@fortawesome/fontawesome-svg-core/styles.css';
-import LoginPopup from '../components/LoginPopup';
-import SignupPopup from '../components/SignupPopup';
+// import '@fortawesome/fontawesome-svg-core/styles.css';
+// import LoginPopup from '../components/LoginPopup';
+// import SignupPopup from '../components/SignupPopup';
 import Header from '../components/Header';  // Import the Header component
 import Footer from '../components/Footer';  // Import the Footer component
 import AppFooter from '../components/App_Footer';
