@@ -1,14 +1,11 @@
 "use client";
-import "../app/globals.css";  // Import the global CSS
+import "../app/globals.css";
 import "/styles/custom.css";
-import { useState, useEffect } from 'react';
-import { usePathname } from 'next/navigation';  // Correct import for next/navigation
+import { useState, useEffect, useMemo } from 'react';
+import { usePathname } from 'next/navigation';
 import { config } from '@fortawesome/fontawesome-svg-core';
-// import '@fortawesome/fontawesome-svg-core/styles.css';
-// import LoginPopup from '../components/LoginPopup';
-// import SignupPopup from '../components/SignupPopup';
-import Header from '../components/Header';  // Import the Header component
-import Footer from '../components/Footer';  // Import the Footer component
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 import AppFooter from '../components/App_Footer';
 
 config.autoAddCss = false;
@@ -20,17 +17,20 @@ export default function LoggedOutLayout({
 }) {
   const [isLoginPopupOpen, setIsLoginPopupOpen] = useState(false);
   const [isSignupPopupOpen, setIsSignupPopupOpen] = useState(false);
-  
-  // Add a state for isSidebarClosed
+
+  // State for sidebar and footer visibility
   const [isSidebarClosed, setIsSidebarClosed] = useState(false);
-  const [isContactsPage, setIsContactsPage] = useState(false);
+  const [isSpecialFooterPage, setIsSpecialFooterPage] = useState(false);
 
   const pathname = usePathname();  // Correct way to get pathname in app directory
 
-  // useEffect to set the correct page status
+  // Memoize the list of paths where AppFooter should be rendered
+  const appFooterPaths = useMemo(() => ["/contacts", "/auth/signup/trainee", "/auth/signup/tutor"], []);
+
+  // useEffect to set the correct footer based on the current path
   useEffect(() => {
-    setIsContactsPage(pathname === "/contacts");
-  }, [pathname]);  // Depend on pathname changes
+    setIsSpecialFooterPage(appFooterPaths.includes(pathname));
+  }, [pathname, appFooterPaths]);  // Depend on pathname and appFooterPaths
 
   const openLoginPopup = () => {
     setIsSignupPopupOpen(false);
@@ -56,7 +56,7 @@ export default function LoggedOutLayout({
       </main>
 
       {/* Conditionally render Footer or AppFooter based on the route */}
-      {isContactsPage ? (
+      {isSpecialFooterPage ? (
         <AppFooter isSidebarClosed={isSidebarClosed} />
       ) : (
         <Footer />

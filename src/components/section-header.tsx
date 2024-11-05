@@ -1,14 +1,23 @@
+import Link from 'next/link';
 import styles from './section-header.module.css';
 
-const SectionHeader = ({ title, buttonText }: { title: string; buttonText: string }) => {
+interface SectionHeaderProps {
+  title: string;
+  buttonText: string;
+  link: string;
+}
+
+const SectionHeader = ({ title, buttonText, link }: SectionHeaderProps) => {
   return (
     <div className="flex justify-between items-center py-4">
       <div className={styles.headerTitle}>
         <p>{title}</p>
       </div>
-      <button className={styles.sectionButton}>
-        {buttonText}
-      </button>
+      <Link href={link} passHref>
+        <button className={styles.sectionButton}>
+          {buttonText}
+        </button>
+      </Link>
     </div>
   );
 };

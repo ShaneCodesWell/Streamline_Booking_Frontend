@@ -1,10 +1,9 @@
-"use client";
+"use client"; 
 import Link from "next/link";
 import Image from "next/image";
 import Login from '../components/LoginPopup';
-import Signup from '../components/SignupPopup';
 import { config } from '@fortawesome/fontawesome-svg-core';
-// import '@fortawesome/fontawesome-svg-core/styles.css';
+import { Button } from '@mui/material';
 
 config.autoAddCss = false;
 
@@ -23,7 +22,13 @@ export default function Header() {
         </ul>
         <div style={{ flex: 1, display: 'flex', justifyContent: 'flex-end', gap: '1rem' }}>
           <Login />
-          <Signup />
+          <Link href="/auth/user-selection">
+          <Button variant="contained"
+            sx={{ textTransform: 'none' }} className="bg-blue-500 text-white py-1 px-4 rounded">
+                Sign Up
+          </Button>
+
+          </Link>
         </div>
       </nav>
     </header>

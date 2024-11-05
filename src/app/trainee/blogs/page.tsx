@@ -34,7 +34,7 @@ export default function Blogs() {
     return (
         <LayoutLoggedIn>
             <div className="mx-auto max-w-7xl sm:px-4 lg:px-2">
-                <SectionHeader title="My Blogs" buttonText="Post an Article" />
+                <SectionHeader title="My Blogs" buttonText="Post an Article" link="/tutor/blogs/add-blog"/>
                 <p className="text-[0.85em] mb-4" style={{ color: 'var(--text-color)' }}>
                     All the blogs and articles you have saved in one place.
                 </p>

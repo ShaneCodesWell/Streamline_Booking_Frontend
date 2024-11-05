@@ -2,14 +2,50 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { Dialog, DialogActions, DialogContent, DialogTitle, Button, TextField, useTheme, Box } from '@mui/material';
-import Image from 'next/image'; // Assuming you're using Next.js
+import Image from 'next/image';
 
 function Signup() {
   const [open, setOpen] = useState(false);
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
   const theme = useTheme();
 
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    if (password !== confirmPassword) {
+      alert("Passwords do not match!");
+      return;
+    }
+
+    try {
+      const response = await fetch('/api/signup', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email, password }),
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        alert("Signup successful!");
+      } else {
+        const errorData = await response.json();
+        alert(`Signup failed: ${errorData.message}`);
+      }
+    } catch (error) {
+      if (error instanceof Error) {
+        alert(`Error: ${error.message}`);
+      } else {
+        alert('An unknown error occurred');
+      }
+    }
+  };
 
   return (
     <div>
@@ -54,6 +90,8 @@ function Signup() {
                     type="email"
                     fullWidth
                     variant="standard"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                     sx={{
                         marginBottom: 1,
                         '& input': {
@@ -71,6 +109,8 @@ function Signup() {
                     type="password"
                     fullWidth
                     variant="standard"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
                     sx={{
                         marginBottom: 1,
                         '& input': {
@@ -88,6 +128,8 @@ function Signup() {
                     type="password"
                     fullWidth
                     variant="standard"
+                    value={confirmPassword}
+                    onChange={(e) => setConfirmPassword(e.target.value)}
                     sx={{
                         marginBottom: 4,
                         '& input': {

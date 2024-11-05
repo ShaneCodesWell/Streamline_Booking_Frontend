@@ -13,14 +13,14 @@ export default function UserSelection() {
   const handleNextStepTutor = () => {
     setClickedCard('tutor'); // Set clicked card state
     setTimeout(() => {
-      router.push('/auth/user-selection/become-a-tutor'); // Navigate to tutor route
+      router.push('/auth/signup/tutor'); // Navigate to tutor route
     }, 300); // Delay to allow the animation to complete
   };
 
   const handleNextStepTrainee = () => {
     setClickedCard('trainee'); // Set clicked card state
     setTimeout(() => {
-      router.push('/trainee/dashboard'); // Navigate to trainee route
+      router.push('/auth/signup/trainee'); // Navigate to trainee route
     }, 300); // Delay to allow the animation to complete
   };
 

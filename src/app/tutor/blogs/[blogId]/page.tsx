@@ -74,7 +74,7 @@ export default function BlogPage() {
                     Exquisite sophisticated iconic cutting-edge laborum deserunt esse bureaux cupidatat id minim. Sharp classic the best commodo nostrud delightful. Conversation aute wifey id. Qui sunt remarkable deserunt intricate airport excepteur classic esse riot girl.
                 </p>
 
-                <SectionHeader title="Related Articles or Posts" buttonText="Post an Article" />
+                <SectionHeader title="Related Articles or Posts" buttonText="Post an Article" link="/tutor/blogs/add-blog" />
                 <div className="flex justify-between pt-8">
                     {blogsData.map((blog, index) => (
                         <SingleBlog
